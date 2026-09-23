@@ -1,5 +1,5 @@
 # UF Urban Analytics website
-
+https://qinghou1.github.io/MSUA/
 ## Files
 - index.html: program homepage with fixed section navigation and an embedded curriculum fallback.
 - 20260921_Curriculum_MSUA.html: the supplied M.S. curriculum, unchanged.
