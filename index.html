@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+<html data-delivery="github-pages" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>UF Urban Analytics | M.S. and Graduate Certificate</title>
+<style>
+:root{
+  --uf-blue:#0021A5;
+  --uf-orange:#FA4616;
+  --ink:#14213d;
+  --muted:#5f6b7a;
+  --line:#dfe5ec;
+  --soft:#f6f8fb;
+  --soft-blue:#eef3ff;
+  --soft-orange:#fff2ec;
+  --white:#fff;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit}.container{max-width:var(--max);margin:auto;padding:0 24px}
+.topbar{background:var(--uf-blue);color:#fff;font-size:14px}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;align-items:center;min-height:42px}
+.brandbar{background:#fff;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px;padding:18px 0}
+.logo{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;color:white;background:linear-gradient(135deg,var(--uf-blue) 0 58%,var(--uf-orange) 58% 100%);font-weight:700}
+.brand h1{font-size:21px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.hero{background:radial-gradient(circle at 82% 20%,rgba(250,70,22,.18),transparent 26%),linear-gradient(135deg,#f7f9fd 0,#eef3ff 58%,#fff6f2 100%);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:76px 0 66px}
+.kicker{color:var(--uf-orange);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+.hero h2{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:12px 0 18px}
+.hero h2 .hero-program-title{display:block}
+.hero h2 .hero-program-tagline{display:block;margin-top:18px;font-size:clamp(24px,3vw,32px);line-height:1.2;text-wrap:balance}
+.hero .lead{font-size:20px;color:#364152;max-width:720px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:8px;text-decoration:none;font-weight:700;border:1px solid transparent}
+.btn.primary{background:var(--uf-orange);color:white}.btn.secondary{background:white;color:var(--uf-blue);border-color:#bfc8d6}
+.stat-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 16px 40px rgba(27,39,73,.08)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}.stat{padding:18px;background:var(--soft);border-radius:12px}
+.stat strong{font-size:28px;display:block;color:var(--uf-blue)}.stat span{font-size:13px;color:var(--muted)}
+.note{margin-top:14px;font-size:12px;color:var(--muted)}
+.inpage{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.inpage .container{display:flex;gap:6px;overflow:auto;padding-top:10px;padding-bottom:10px}
+.inpage a{white-space:nowrap;text-decoration:none;color:#30405b;font-size:14px;padding:8px 11px;border-radius:7px}
+.inpage a:hover{background:var(--soft-blue);color:var(--uf-blue)}
+section{padding:72px 0}section.alt{background:var(--soft)}
+.section-head{max-width:800px;margin-bottom:30px}.section-head h3{font-size:34px;margin:0 0 10px}.section-head p{margin:0;color:var(--muted);font-size:18px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:14px;padding:24px}.card h4{font-size:20px;margin:0 0 8px}.card p{color:var(--muted);margin:0}
+.card .meta{font-size:13px;font-weight:700;color:var(--uf-blue);margin-bottom:10px}
+.program-card{position:relative;overflow:hidden}.program-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--uf-orange)}.program-card.blue:before{background:var(--uf-blue)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.pill{border-radius:999px;background:var(--soft-blue);color:var(--uf-blue);padding:6px 10px;font-size:13px;font-weight:700}
+.learn-card{min-height:200px}.icon{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:var(--soft-orange);color:var(--uf-orange);font-size:20px;font-weight:700;margin-bottom:15px}
+.table-wrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{padding:15px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f0f4f9;font-size:13px;color:#43516a}td:first-child{font-weight:700}
+summary{cursor:pointer;font-weight:700;font-size:17px;padding:18px 0}details{border-bottom:1px solid var(--line)}details p{color:var(--muted);margin-top:0}
+.project-media{height:160px;border-radius:10px;margin-bottom:16px;background:linear-gradient(135deg,rgba(0,33,165,.85),rgba(250,70,22,.75)),repeating-linear-gradient(45deg,transparent 0 12px,rgba(255,255,255,.12) 12px 14px);display:grid;place-items:center;color:white;font-weight:700}
+.role-list{columns:2;gap:30px;padding-left:20px}.profile{display:flex;gap:16px;align-items:flex-start}
+.avatar{width:74px;height:74px;flex:0 0 74px;border-radius:50%;background:linear-gradient(135deg,#d9e5ff,#ffd8c8);border:1px solid var(--line);display:grid;place-items:center;color:var(--uf-blue);font-weight:700}
+.cta{background:var(--uf-blue);color:white;border-radius:20px;padding:34px;display:grid;grid-template-columns:1.3fr .7fr;gap:20px;align-items:center}.cta p{color:#dbe5ff}.cta .actions{justify-content:flex-end;margin-top:0}.cta .secondary{border-color:#d7def0}
+.admission-card{border-top:5px solid var(--uf-orange)}.admission-card.cert{border-top-color:var(--uf-blue)}
+.deadline{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:12px 0}
+footer{background:#0d1730;color:#e8ecf4;padding:42px 0}footer p{color:#aab5c6}.small{font-size:13px;color:var(--muted)}
+.alert{border-left:4px solid #d99a00;background:#fff9df;padding:14px 16px;border-radius:8px;color:#604a00;margin-top:20px}
+@media(max-width:900px){.hero-grid,.grid-4,.grid-3,.cta{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.hero-grid{padding:54px 0}.cta .actions{justify-content:flex-start}}
+@media(max-width:560px){.stats{grid-template-columns:1fr}.container{padding:0 18px}section{padding:54px 0}.hero h2{font-size:40px}}
+
+
+
+
+
+
+
+.compact-actions{margin-top:16px}
+.faculty-dept{margin-top:26px;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+.dept-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 18px;background:var(--uf-blue);color:#fff}
+.dept-bar.ece{background:#1f3763}
+.dept-bar>div:first-child{display:flex;align-items:center;gap:12px}
+.dept-code{display:inline-grid;place-items:center;min-width:50px;height:31px;padding:0 10px;border-radius:999px;background:rgba(255,255,255,.16);font-size:12px;font-weight:800;letter-spacing:.08em}
+.slider-controls{display:flex;gap:7px}
+.slider-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font-size:24px;line-height:1;cursor:pointer}
+.slider-btn:hover,.slider-btn:focus-visible{background:#fff;color:var(--uf-blue);outline:none}
+.faculty-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px;scrollbar-width:thin;scroll-behavior:smooth}
+.faculty-card{flex:0 0 310px;scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.faculty-photo-wrap{height:210px;background:linear-gradient(135deg,#eef3ff,#fff2ec);position:relative;overflow:hidden}
+.faculty-photo{width:100%;height:100%;display:block;object-fit:cover;object-position:center top}
+.faculty-photo-fallback{position:absolute;inset:0;display:none;place-items:center;font-size:42px;font-weight:800;color:var(--uf-blue)}
+.faculty-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.faculty-body h4{margin:0 0 6px;font-size:21px}
+.faculty-title{color:#30405b;font-size:13px;font-weight:700;line-height:1.4;margin-bottom:10px}
+.faculty-body p{font-size:14px;color:var(--muted);margin:0 0 15px}
+.faculty-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.faculty-links a{font-size:12px;font-weight:700;text-decoration:none;border:1px solid #cbd4e1;border-radius:7px;padding:7px 9px;color:var(--uf-blue);background:#fff}
+.faculty-links a:hover{background:var(--soft-blue)}
+.faculty-note{margin-top:12px}
+.application-details{border:1px solid var(--line);border-radius:10px;margin-top:18px;padding:0 16px;background:var(--soft)}
+.application-details summary{padding:14px 0;color:var(--uf-blue)}
+.requirements-body{padding:0 0 15px}
+.requirements-body p{color:var(--muted);margin:0 0 10px}
+.requirements-body ul{margin:8px 0 12px;padding-left:20px}
+.requirements-body li{margin:7px 0}
+@media(max-width:900px){
+  
+  .faculty-card{flex-basis:285px}
+}
+@media(max-width:560px){
+  .faculty-card{flex-basis:84vw}
+  .dept-bar strong{font-size:14px}
+}
+
+/* Shared About formatting, including What is Urban Analytics? and Why UF? */
+.about-block + .about-block{margin-top:44px}
+#about .about-block .card{padding:24px}
+#about .about-block .section-head h3{font-size:34px;margin:0 0 10px}
+#about .about-block .section-head p{font-size:18px;line-height:1.55}
+section[id]{scroll-margin-top:76px}
+
+/* Visible email addresses and unconfirmed ECE profile templates. */
+.faculty-body .faculty-email{font-size:13px;line-height:1.5;margin:0 0 13px;color:#30405b}
+.faculty-email a{color:var(--uf-blue);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.faculty-email a:focus-visible{outline:2px solid var(--uf-blue);outline-offset:3px}
+.ece-template-note{margin:0;padding:14px 20px 0;color:var(--muted);font-size:14px}
+.faculty-photo-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;background:#eef1f6;color:#64728a}
+.faculty-photo-placeholder>span{font-size:13px;font-weight:700;letter-spacing:.025em}
+.placeholder-portrait{width:78px;height:84px;position:relative;overflow:hidden}
+.placeholder-portrait:before{content:"";position:absolute;left:23px;top:0;width:32px;height:32px;border-radius:50%;background:#c1cada}
+.placeholder-portrait:after{content:"";position:absolute;left:7px;bottom:0;width:64px;height:42px;border-radius:34px 34px 10px 10px;background:#c1cada}
+.template-label{font-size:11px;color:#60728e;letter-spacing:.07em;font-weight:700;margin-bottom:8px}
+.faculty-placeholder-link{display:inline-block;font-size:12px;font-weight:700;border:1px dashed #cbd4e1;border-radius:7px;padding:7px 9px;color:#64728a;background:#f8f9fc}
+.is-placeholder .faculty-body .faculty-email{color:#64728a}
+.slider-btn:disabled{opacity:.4;cursor:default}
+
+/* Standalone curriculum viewer: actual uploaded HTML, not a rewritten summary. */
+.curriculum-link[aria-busy="true"]{opacity:.7;cursor:progress}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.curriculum-viewer{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-width:100vw;max-height:100vh;max-height:100dvh;margin:0;padding:0;border:0;background:#fff;color:var(--ink);box-sizing:border-box}
+.curriculum-viewer[open]{display:flex;flex-direction:column}
+.curriculum-viewer::backdrop{background:rgba(13,23,48,.45)}
+.curriculum-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 24px;border-bottom:1px solid var(--line);background:#f6f8fb;flex:0 0 auto}
+.curriculum-toolbar-main{display:flex;align-items:center;gap:20px;min-width:0}
+.curriculum-back{font:inherit;font-size:14px;font-weight:700;line-height:1.35;padding:10px 14px;border:1px solid #bfc8d6;border-radius:8px;background:#fff;color:var(--uf-blue);cursor:pointer;flex-shrink:0}
+.curriculum-viewer-heading{margin:0;font-size:17px;line-height:1.3;color:var(--ink)}
+.curriculum-source-name{display:block;margin-top:3px;color:var(--muted);font-size:11px;overflow-wrap:anywhere}
+.curriculum-download{font-size:13px;color:var(--uf-blue);font-weight:700;text-underline-offset:3px;white-space:nowrap}
+.curriculum-frame{display:block;width:100%;border:0;flex:1 1 auto;min-height:0;background:white}
+.curriculum-open{overflow:hidden}
+.curriculum-back:focus-visible,.curriculum-download:focus-visible{outline:3px solid var(--uf-blue);outline-offset:3px}
+@media(max-width:900px){.about-block + .about-block{margin-top:40px}}
+@media(max-width:560px){
+  .topbar .container{flex-wrap:wrap;gap:3px;padding-top:8px;padding-bottom:8px}
+  .dept-bar{gap:10px}
+  .dept-bar>div:first-child{gap:8px;min-width:0}
+  .slider-controls{flex-shrink:0}
+  .faculty-card{flex-basis:calc(100vw - 94px)}
+  .curriculum-toolbar{padding:12px 14px;gap:10px;align-items:flex-start}
+  .curriculum-toolbar-main{display:block;min-width:0}
+  .curriculum-viewer-heading{margin-top:10px;font-size:15px}
+  .curriculum-source-name{font-size:10px}
+  .curriculum-download{margin-top:11px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){html,.faculty-track{scroll-behavior:auto}}
+
+/* Working section navigation in full pages and embedded previews. */
+section[id], #top, #main-content {scroll-margin-top:var(--section-offset,84px)}
+.inpage a[aria-current="location"]{background:var(--soft-blue);color:var(--uf-blue);font-weight:700}
+.inpage a:focus-visible,.btn:focus-visible,summary:focus-visible,.slider-btn:focus-visible{outline:3px solid var(--uf-blue);outline-offset:3px}
+#about .why-uf .section-head{max-width:800px;margin-bottom:30px}
+.skip-to-content{position:fixed;left:16px;top:-100px;z-index:100;background:#fff;color:var(--uf-blue);padding:12px 16px;border:2px solid var(--uf-blue);border-radius:7px;font-weight:700}
+.skip-to-content:focus{top:12px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<meta content="Explore Urban Analytics at the University of Florida, including the M.S. and graduate certificate, curriculum, faculty, and admissions." name="description"/></head>
+<body><a class="skip-to-content" data-section-target="main-content" href="#main-content">Skip to main content</a>
+<div class="topbar"><div class="container"><div>University of Florida · Department of Urban &amp; Regional Planning</div><div>M.S. in Urban Analytics + Graduate Certificate</div></div></div>
+<div class="brandbar">
+<div class="container brand">
+<div class="logo">UF</div>
+<div><h1>Urban Analytics</h1><p>Master of Science + Graduate Certificate</p></div>
+</div>
+</div>
+<header class="hero" id="top">
+<div class="container hero-grid">
+<div>
+<div class="kicker">Urban Analytics at UF</div>
+<h2><span class="hero-program-title">M.S. &amp; Certificate of Urban Analytics:</span>
+<span class="hero-program-tagline">Use data, GIS, and AI to better understand cities.</span></h2>
+<p class="lead">Build analytical and computational skills to study transportation, land use, housing, infrastructure, the environment, and other complex urban challenges.</p>
+<div class="actions">
+<a class="btn primary" data-section-target="programs" href="#programs">Explore Programs</a>
+<a class="btn secondary" data-section-target="admissions" href="#admissions">Admissions &amp; Apply</a>
+</div>
+</div>
+<aside class="stat-card">
+<div class="stats">
+<div class="stat"><strong>30</strong><span>M.S. credits</span></div>
+<div class="stat"><strong>15</strong><span>Certificate credits</span></div>
+<div class="stat"><strong>AI</strong><span>Machine learning + urban analytics</span></div>
+<div class="stat"><strong>GIS</strong><span>Spatial analysis + geospatial methods</span></div>
+</div>
+<div class="note">Explore two interdisciplinary pathways that connect urban planning with GIS, data science, machine learning, and artificial intelligence.</div>
+</aside>
+</div>
+</header>
+<nav aria-label="Program sections" class="inpage"><div class="container">
+<a data-section-target="about" href="#about">About</a><a data-section-target="programs" href="#programs">Programs</a><a data-section-target="learning" href="#learning">What You’ll Learn</a><a data-section-target="curriculum" href="#curriculum">Curriculum</a><a data-section-target="careers" href="#careers">Careers</a><a data-section-target="faculty" href="#faculty">Faculty &amp; Research</a><a data-section-target="connect" href="#connect">Connect</a><a data-section-target="admissions" href="#admissions">Admissions</a><a data-section-target="faq" href="#faq">FAQ</a>
+</div></nav>
+<main id="main-content">
+<section id="about">
+<div class="container">
+<div aria-labelledby="what-is-urban-analytics" class="about-block"><div class="section-head"><h3 id="what-is-urban-analytics">What is Urban Analytics?</h3><p>Urban analytics combines data, spatial analysis, computing, visualization, and artificial intelligence to understand how cities function and to support better urban decision-making.</p></div><div class="grid-3">
+<div class="card"><div class="meta">UNDERSTAND</div><h4>Study complex urban systems</h4><p>Use data to investigate patterns in mobility, land use, infrastructure, communities, and the built environment.</p></div>
+<div class="card"><div class="meta">ANALYZE</div><h4>Build technical skills</h4><p>Apply GIS, programming, data science, visualization, and machine learning to urban questions.</p></div>
+<div class="card"><div class="meta">APPLY</div><h4>Support urban decisions</h4><p>Translate analysis into evidence that can inform planning, policy, design, and public or private-sector decisions.</p></div>
+</div></div>
+<div aria-labelledby="why-uf-heading" class="about-block why-uf"><div class="section-head"><h3 id="why-uf-heading">Why UF?</h3><p>Urban planning expertise meets technical AI training.</p></div><div class="grid-3"><div class="card"><div class="meta">TECHNICAL DEPTH</div><h4>Technical AI coursework</h4><p>Build AI and machine learning skills through technical courses in engineering, computing, and related fields.</p></div><div class="card"><div class="meta">URBAN FOCUS</div><h4>Urban context stays central</h4><p>Address real urban challenges through planning coursework and a research project, with pathways tailored to your background.</p></div><div class="card"><div class="meta">INTERDISCIPLINARY</div><h4>Cross-department learning</h4><p>Learn from faculty across planning, engineering, computer science, and architecture.</p></div></div></div>
+</div>
+</section>
+<section class="alt" id="programs">
+<div class="container">
+<div class="section-head"><h3>Choose the Program That Fits Your Goals</h3><p>UF currently offers both a full master’s degree and a graduate certificate in Urban Analytics.</p></div>
+<div class="grid-2">
+<article class="card program-card"><div class="meta">MASTER OF SCIENCE</div><h4>M.S. in Urban Analytics</h4><div class="pills"><span class="pill">30 credits</span><span class="pill">12-18 months</span><span class="pill">Master Research Project</span></div><p>Designed to prepare students to use data, GIS, computing, visualization, and artificial intelligence to understand and address complex urban challenges.</p><div class="actions"><a class="btn secondary curriculum-link" data-curriculum="msua" href="20260921_Curriculum_MSUA.html">Detailed M.S. Course Information</a></div></article>
+<article class="card program-card blue"><div class="meta">GRADUATE CERTIFICATE</div><h4>Graduate Certificate in Urban Analytics</h4><div class="pills"><span class="pill">15 credits</span><span class="pill">Option A / Option B</span><span class="pill">Up to 3 years</span></div><p>Designed for students across disciplines who want to strengthen their skills in urban data analysis, GIS, data science, and artificial intelligence.</p><div class="actions"><a class="btn secondary curriculum-link" data-curriculum="certificate" href="20260921_Curriculum_Certificate.html">Detailed Certificate Course Information</a></div></article>
+</div>
+</div>
+</section>
+<section id="learning">
+<div class="container">
+<div class="section-head"><h3>What You’ll Learn</h3><p>Build a balanced skill set that connects urban systems knowledge with spatial analysis, programming, visualization, and machine learning.</p></div>
+<div class="grid-4">
+<div class="card learn-card"><div class="icon">01</div><h4>Urban Data &amp; Analytics</h4><p>Work with complex urban datasets and develop analytical approaches for interpreting patterns and change.</p></div>
+<div class="card learn-card"><div class="icon">02</div><h4>GIS &amp; Spatial Analysis</h4><p>Analyze, model, and visualize geographic patterns using geospatial methods and tools.</p></div>
+<div class="card learn-card"><div class="icon">03</div><h4>AI &amp; Machine Learning</h4><p>Apply machine learning and related computational methods to urban data and urban systems.</p></div>
+<div class="card learn-card"><div class="icon">04</div><h4>Urban Applications</h4><p>Connect technical analysis with planning, transportation, land use, policy, and other urban applications.</p></div>
+</div>
+</div>
+</section>
+<section class="alt" id="curriculum">
+<div class="container">
+<div class="section-head"><h3>Curriculum</h3><p>Review the program structure here, then open the detailed course pages for course titles, credits, terms, policies, and model semester plans.</p></div>
+<h4 style="font-size:24px;margin:0 0 14px;">M.S. in Urban Analytics - 30 Credits</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Component</th><th>Credits</th><th>Overview</th></tr></thead>
+<tbody>
+<tr><td>Required Core Courses</td><td>18</td><td>Urban data structures, planning foundations, introductory and intermediate urban analytics, and a 6-credit Master Research Project.</td></tr>
+<tr><td>Elective Group 1: Urban and Regional Planning</td><td>6 or 9</td><td>Planning information systems, geospatial modeling, spatial analysis, transportation and land use modeling, and related urban methods.</td></tr>
+<tr><td>Elective Group 2: Machine Learning</td><td>6 or 9</td><td>Machine learning, pattern recognition, intelligent systems, and related technical coursework across UF departments.</td></tr>
+<tr><td>Total</td><td>30</td><td>The elective allocation depends on academic background and applicable waivers.</td></tr>
+</tbody>
+</table></div>
+<div class="actions compact-actions">
+<a class="btn primary curriculum-link" data-curriculum="msua" href="20260921_Curriculum_MSUA.html">View Detailed M.S. Curriculum</a>
+</div>
+<div style="height:34px"></div>
+<h4 style="font-size:24px;margin:0 0 14px;">Graduate Certificate - 15 Credits</h4>
+<div class="grid-2">
+<div class="card"><div class="meta">OPTION A</div><h4>Planning-related background</h4><p><strong>9 credits</strong> of required core courses, plus <strong>3 credits</strong> in Urban and Regional Planning Theory and Methods and <strong>3 credits</strong> in Data and Computer Science.</p></div>
+<div class="card"><div class="meta">OPTION B</div><h4>Computing / engineering-related background</h4><p><strong>6 credits</strong> of required core courses, plus <strong>9 credits</strong> in Urban and Regional Planning Theory and Methods.</p></div>
+</div>
+<p class="small" style="margin-top:14px;">Certificate completion timeframe: within 3 years of initial enrollment in the graduate certificate program.</p>
+<div class="actions compact-actions">
+<a class="btn primary curriculum-link" data-curriculum="certificate" href="20260921_Curriculum_Certificate.html">View Detailed Certificate Curriculum</a>
+</div>
+</div>
+</section>
+<section class="alt" id="careers">
+<div class="container">
+<div class="section-head"><h3>Career Pathways</h3><p>Urban analytics skills can support work in public agencies, consulting, planning and design firms, transportation, environmental planning, and data-focused roles.</p></div>
+<div class="grid-2">
+<div class="card"><div class="meta">EXAMPLE CAREER AREAS</div><ul class="role-list"><li>Urban Data &amp; Analytics</li><li>GIS &amp; Geospatial Analysis</li><li>Transportation &amp; Mobility</li><li>Planning &amp; Policy Analytics</li><li>Smart Cities &amp; Urban Technology</li><li>Data Science &amp; AI</li></ul></div>
+<div class="card"><div class="meta">EXAMPLE JOB TITLES</div><ul class="role-list"><li>Data Analyst</li><li>City Planner</li><li>Urban Designer</li><li>Consultant</li><li>Transportation Planner / Engineer</li><li>Environmental Planner</li></ul></div>
+</div>
+</div>
+</section>
+<section id="faculty">
+<div class="container">
+<div class="section-head">
+<h3>Faculty &amp; Research</h3>
+<p>Explore the Urban and Regional Planning faculty profiles below. The Electrical and Computer Engineering row currently shows a profile template; faculty details will be added once participation is confirmed.</p>
+</div>
+<div class="faculty-dept">
+<div class="dept-bar">
+<div>
+<span class="dept-code">URP</span>
+<strong>Department of Urban &amp; Regional Planning</strong>
+</div>
+<div class="slider-controls">
+<button aria-label="Scroll URP faculty left" class="slider-btn" onclick="scrollFaculty('urp-track',-1)" type="button">‹</button>
+<button aria-label="Scroll URP faculty right" class="slider-btn" onclick="scrollFaculty('urp-track',1)" type="button">›</button>
+</div>
+</div>
+<div aria-label="Urban and Regional Planning faculty" class="faculty-track" id="urp-track" tabindex="0">
+<article class="faculty-card">
+<div class="faculty-photo-wrap">
+<img alt="Zhong-Ren Peng" class="faculty-photo" decoding="async" loading="lazy" onerror="facultyPhotoFallback(this,'ZP')" src="https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2020/03/Peng_headshot-e1694750536260.jpg"/>
+<div class="faculty-photo-fallback">ZP</div>
+</div>
+<div class="faculty-body">
+<h4>Zhong-Ren Peng</h4>
+<div class="faculty-title">Professor; Director, International Center for Adaptation Planning and Design</div><p class="faculty-email"><span>Email: </span><a href="mailto:zpeng@dcp.ufl.edu">zpeng@dcp.ufl.edu</a></p>
+<p>GIS, transportation and land use, information technology for planning, climate adaptation, and sustainable urban systems.</p>
+<div class="faculty-links">
+<a href="https://dcp.ufl.edu/iadapt/" rel="noopener" target="_blank">Research Web</a>
+<a href="https://scholar.google.com/scholar?q=%22Zhong-Ren+Peng%22+University+of+Florida" rel="noopener" target="_blank">Google Scholar</a>
+</div>
+</div>
+</article>
+<article class="faculty-card">
+<div class="faculty-photo-wrap">
+<img alt="Emre Tepe" class="faculty-photo" decoding="async" loading="lazy" onerror="facultyPhotoFallback(this,'ET')" src="https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2023/09/Tepe-scaled-e1694749582497.jpg"/>
+<div class="faculty-photo-fallback">ET</div>
+</div>
+<div class="faculty-body">
+<h4>Emre Tepe</h4>
+<div class="faculty-title">Associate Professor</div><p class="faculty-email"><span>Email: </span><a href="mailto:emretepe@ufl.edu">emretepe@ufl.edu</a></p>
+<p>Urban analytics, spatial econometrics, land use change, spatiotemporal modeling, machine learning, artificial intelligence, and big data.</p>
+<div class="faculty-links">
+<a href="https://dcp.ufl.edu/faculties/emre-tepe/" rel="noopener" target="_blank">Research Web</a>
+<a href="https://scholar.google.com/citations?hl=en&amp;user=B7XoIx8AAAAJ" rel="noopener" target="_blank">Google Scholar</a>
+</div>
+</div>
+</article>
+<article class="faculty-card">
+<div class="faculty-photo-wrap">
+<img alt="Shenhao Wang" class="faculty-photo" decoding="async" loading="lazy" onerror="facultyPhotoFallback(this,'SW')" src="https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2022/08/Shenhao-Wang-scaled.jpg"/>
+<div class="faculty-photo-fallback">SW</div>
+</div>
+<div class="faculty-body">
+<h4>Shenhao Wang</h4>
+<div class="faculty-title">Assistant Professor; Director, Urban AI Laboratory</div><p class="faculty-email"><span>Email: </span><a href="mailto:shenhaowang@ufl.edu">shenhaowang@ufl.edu</a></p>
+<p>Urban science, deep learning, choice modeling, urban mobility, network analysis, computational urban justice, and generative AI for planning.</p>
+<div class="faculty-links">
+<a href="http://urbanailab.com/" rel="noopener" target="_blank">Research Web</a>
+<a href="https://scholar.google.com/citations?user=01AmQ8wAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a>
+</div>
+</div>
+</article>
+<article class="faculty-card">
+<div class="faculty-photo-wrap">
+<img alt="Yan Wang" class="faculty-photo" decoding="async" loading="lazy" onerror="facultyPhotoFallback(this,'YW')" src="https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2025/05/wang-yan-300x300-2.jpg"/>
+<div class="faculty-photo-fallback">YW</div>
+</div>
+<div class="faculty-body">
+<h4>Yan Wang</h4>
+<div class="faculty-title">Associate Professor; Founder and Director, Urban Agility and Resilience Lab</div><p class="faculty-email"><span>Email: </span><a href="mailto:yanw@ufl.edu">yanw@ufl.edu</a></p>
+<p>Urban resilience, urban analytics, responsible AI, crisis informatics, spatial and infrastructure planning, and smart and connected communities.</p>
+<div class="faculty-links">
+<a href="https://dcp.ufl.edu/fiber/urban-agility-lab/" rel="noopener" target="_blank">Research Web</a>
+<a href="https://scholar.google.com/citations?hl=en&amp;user=znl9EkUAAAAJ" rel="noopener" target="_blank">Google Scholar</a>
+</div>
+</div>
+</article>
+<article class="faculty-card">
+<div class="faculty-photo-wrap">
+<img alt="Zhaoxi Zhang" class="faculty-photo" decoding="async" loading="lazy" onerror="facultyPhotoFallback(this,'ZZ')" src="https://scholar.googleusercontent.com/citations?view_op=view_photo&amp;user=Ufox_S8AAAAJ&amp;citpid=1"/>
+<div class="faculty-photo-fallback">ZZ</div>
+</div>
+<div class="faculty-body">
+<h4>Zhaoxi Zhang</h4>
+<div class="faculty-title">Assistant Professor; Lead, U.TOP Lab</div><p class="faculty-email"><span>Email: </span><a href="mailto:zhang.zhaoxi@ufl.edu">zhang.zhaoxi@ufl.edu</a></p>
+<p>Urban health sensing, participatory AI, human-computer-environment interaction, 3D simulation, urban robotics, and technology-forward urban design methods.</p>
+<div class="faculty-links">
+<a href="https://dcp.ufl.edu/faculties/zhaoxi-zhang/" rel="noopener" target="_blank">Research Web</a>
+<a href="https://scholar.google.com/citations?user=Ufox_S8AAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="faculty-dept">
+<div class="dept-bar ece">
+<div>
+<span class="dept-code">ECE</span>
+<strong>Department of Electrical &amp; Computer Engineering</strong>
+</div>
+<div class="slider-controls">
+<button aria-label="Scroll ECE faculty left" class="slider-btn" onclick="scrollFaculty('ece-track',-1)" type="button">‹</button>
+<button aria-label="Scroll ECE faculty right" class="slider-btn" onclick="scrollFaculty('ece-track',1)" type="button">›</button>
+</div>
+</div><p class="ece-template-note">Faculty profiles will be added once participation is confirmed. The cards below show the planned layout.</p>
+<div aria-label="Electrical and Computer Engineering faculty profile templates" class="faculty-track" id="ece-track" tabindex="0"><article aria-label="ECE faculty profile template 1" class="faculty-card is-placeholder">
+<div aria-label="Photo placeholder" class="faculty-photo-wrap faculty-photo-placeholder">
+<div aria-hidden="true" class="placeholder-portrait"></div>
+<span>Faculty photo</span>
+</div>
+<div class="faculty-body">
+<div class="template-label">PROFILE TEMPLATE</div>
+<h4>Faculty Name</h4>
+<div class="faculty-title">Title to be confirmed</div>
+<p class="faculty-email">Email to be added</p>
+<p>Research interests and areas of expertise will appear here.</p>
+<div aria-label="Links will be added when the faculty profile is confirmed" class="faculty-links">
+<span class="faculty-placeholder-link">Research Web</span>
+<span class="faculty-placeholder-link">Google Scholar</span>
+</div>
+</div>
+</article><article aria-label="ECE faculty profile template 2" class="faculty-card is-placeholder">
+<div aria-label="Photo placeholder" class="faculty-photo-wrap faculty-photo-placeholder">
+<div aria-hidden="true" class="placeholder-portrait"></div>
+<span>Faculty photo</span>
+</div>
+<div class="faculty-body">
+<div class="template-label">PROFILE TEMPLATE</div>
+<h4>Faculty Name</h4>
+<div class="faculty-title">Title to be confirmed</div>
+<p class="faculty-email">Email to be added</p>
+<p>Research interests and areas of expertise will appear here.</p>
+<div aria-label="Links will be added when the faculty profile is confirmed" class="faculty-links">
+<span class="faculty-placeholder-link">Research Web</span>
+<span class="faculty-placeholder-link">Google Scholar</span>
+</div>
+</div>
+</article><article aria-label="ECE faculty profile template 3" class="faculty-card is-placeholder">
+<div aria-label="Photo placeholder" class="faculty-photo-wrap faculty-photo-placeholder">
+<div aria-hidden="true" class="placeholder-portrait"></div>
+<span>Faculty photo</span>
+</div>
+<div class="faculty-body">
+<div class="template-label">PROFILE TEMPLATE</div>
+<h4>Faculty Name</h4>
+<div class="faculty-title">Title to be confirmed</div>
+<p class="faculty-email">Email to be added</p>
+<p>Research interests and areas of expertise will appear here.</p>
+<div aria-label="Links will be added when the faculty profile is confirmed" class="faculty-links">
+<span class="faculty-placeholder-link">Research Web</span>
+<span class="faculty-placeholder-link">Google Scholar</span>
+</div>
+</div>
+</article><article aria-label="ECE faculty profile template 4" class="faculty-card is-placeholder">
+<div aria-label="Photo placeholder" class="faculty-photo-wrap faculty-photo-placeholder">
+<div aria-hidden="true" class="placeholder-portrait"></div>
+<span>Faculty photo</span>
+</div>
+<div class="faculty-body">
+<div class="template-label">PROFILE TEMPLATE</div>
+<h4>Faculty Name</h4>
+<div class="faculty-title">Title to be confirmed</div>
+<p class="faculty-email">Email to be added</p>
+<p>Research interests and areas of expertise will appear here.</p>
+<div aria-label="Links will be added when the faculty profile is confirmed" class="faculty-links">
+<span class="faculty-placeholder-link">Research Web</span>
+<span class="faculty-placeholder-link">Google Scholar</span>
+</div>
+</div>
+</article><article aria-label="ECE faculty profile template 5" class="faculty-card is-placeholder">
+<div aria-label="Photo placeholder" class="faculty-photo-wrap faculty-photo-placeholder">
+<div aria-hidden="true" class="placeholder-portrait"></div>
+<span>Faculty photo</span>
+</div>
+<div class="faculty-body">
+<div class="template-label">PROFILE TEMPLATE</div>
+<h4>Faculty Name</h4>
+<div class="faculty-title">Title to be confirmed</div>
+<p class="faculty-email">Email to be added</p>
+<p>Research interests and areas of expertise will appear here.</p>
+<div aria-label="Links will be added when the faculty profile is confirmed" class="faculty-links">
+<span class="faculty-placeholder-link">Research Web</span>
+<span class="faculty-placeholder-link">Google Scholar</span>
+</div>
+</div>
+</article></div>
+</div>
+<p class="small faculty-note">Use the arrows or swipe horizontally to explore each department.</p>
+</div>
+</section>
+<section class="alt" id="connect">
+<div class="container">
+<div class="cta">
+<div><h3 style="font-size:30px;margin:0 0 8px;">Interested in Urban Analytics?</h3><p style="margin:0;">Review the curriculum and admissions information, then contact the program if you have questions about fit, course planning, or application materials.</p></div>
+<div class="actions"><a class="btn primary" data-section-target="admissions" href="#admissions">Review Admissions</a><a class="btn secondary" data-section-target="faq" href="#faq">Read FAQ</a></div>
+</div>
+</div>
+</section>
+<section id="admissions">
+<div class="container">
+<div class="section-head"><h3>Admissions &amp; Application</h3><p>Review deadlines and expand the application requirements for the M.S. or Graduate Certificate.</p></div>
+<div class="grid-2">
+<article class="card admission-card">
+<div class="meta">MASTER OF SCIENCE</div>
+<h4>M.S. in Urban Analytics</h4>
+<p><strong>Priority application deadlines</strong></p>
+<div class="deadline"><span>Fall admission</span><strong>January 15</strong></div>
+<div class="deadline"><span>Spring admission</span><strong>August 15</strong></div>
+<p class="small">Applications submitted after the priority deadline may be considered on a case-by-case basis, subject to program policy.</p>
+<details class="application-details">
+<summary>Application Requirements</summary>
+<div class="requirements-body">
+<p>Applicants complete UF's Graduate Admissions online application and submit the required materials through the application system.</p>
+<ul>
+<li><strong>Transcripts</strong> showing a 3.0+ GPA.</li>
+<li><strong>Resume or CV.</strong></li>
+<li><strong>Personal Statement, 500 words maximum.</strong> Address your personal background, life experiences, opportunities and challenges, leadership skills, and values.</li>
+<li><strong>Statement of Intent, 1,500 words maximum.</strong> Explain your interest in urban analytics, how UF's MSUA program supports your professional goals, your plan of study, and your expectations after graduation.</li>
+<li><strong>Three letters of recommendation.</strong> At least two should be academic letters if you graduated within the last three years.</li>
+<li><strong>English proficiency</strong> through TOEFL or IELTS for applicants whose first language is not English, as required by UF policy.</li>
+<li><strong>GRE is not required.</strong></li>
+</ul>
+<p class="small">The program's application material notes that admission decisions are typically communicated within about two months of the application deadline.</p>
+</div>
+</details>
+<div class="actions">
+<a class="btn primary" href="https://admissions.ufl.edu/apply/graduate/" rel="noopener" target="_blank">Apply Now</a>
+</div>
+</article>
+<article class="card admission-card cert">
+<div class="meta">GRADUATE CERTIFICATE</div>
+<h4>Graduate Certificate in Urban Analytics</h4>
+<p><strong>Preferred application deadlines</strong></p>
+<div class="deadline"><span>Fall admission</span><strong>March 1</strong></div>
+<div class="deadline"><span>Spring admission</span><strong>November 1</strong></div>
+<p class="small">Applications are accepted on a rolling basis throughout the year.</p>
+<details class="application-details">
+<summary>Application Requirements</summary>
+<div class="requirements-body">
+<ul>
+<li><strong>An accredited bachelor's degree.</strong></li>
+<li><strong>Transcripts</strong> showing a 3.0+ GPA.</li>
+<li><strong>Resume or CV.</strong></li>
+<li><strong>English proficiency</strong> through TOEFL or IELTS for applicants whose first language is not English, as required by UF policy.</li>
+<li><strong>GRE is not required.</strong></li>
+</ul>
+</div>
+</details>
+<div class="actions">
+<a class="btn primary" href="https://admissions.ufl.edu/apply/graduate/" rel="noopener" target="_blank">Apply Now</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="alt" id="faq">
+<div class="container">
+<div class="section-head">
+<h3>Frequently Asked Questions</h3>
+<p>Common questions about academic background, curriculum pathways, applications, and career direction.</p>
+</div>
+<details>
+<summary>Do I need an urban planning background?</summary>
+<p>No. The M.S. is structured for students from different academic backgrounds. Students with a planning or similar background may receive a waiver for URP 6007, while students without a planning background take more credits from the Urban and Regional Planning elective group. The Graduate Certificate also has separate pathways for planning-related and computing or engineering-related backgrounds.</p>
+</details>
+<details>
+<summary>Do I need a computer science or programming background?</summary>
+<p>No specific computer science background is required for every student. URP 6295 may be waived for students with a computer science or similar background. For students without that background, the detailed M.S. curriculum also recommends introductory programming and data science preparation such as COP 3502 Programming Fundamentals 1 and EEL 3850 Data Science for ECE.</p>
+</details>
+<details>
+<summary>How many credits are required, and how long does the program take?</summary>
+<p>The M.S. requires 30 credits. The current model semester plans distribute those credits across three semesters for both fall-entry and spring-entry students, although an individual student's schedule can vary based on course availability, waivers, and academic background. The Graduate Certificate requires 15 credits and must be completed within three years of initial enrollment.</p>
+</details>
+<details>
+<summary>What is the difference between the M.S. and the Graduate Certificate?</summary>
+<p>The M.S. is a 30-credit graduate degree that includes core urban analytics coursework, planning and machine learning electives, and a 6-credit Master Research Project. The Graduate Certificate is a focused 15-credit credential with two curriculum options based on the student's prior background.</p>
+</details>
+<details>
+<summary>Can any required courses be waived or replaced?</summary>
+<p>Yes, in specific cases. URP 6295 may be waived for students with a computer science or similar background, and URP 6007 may be waived for students with a planning or similar background. URP 6223 may be replaced by URP 6931 Artificial Intelligence in the Built Environment with permission from the program coordinator. Alternative electives also require program coordinator approval.</p>
+</details>
+<details>
+<summary>Is the GRE required?</summary>
+<p>No. The uploaded application requirements for both the M.S. and the Graduate Certificate state that the GRE is no longer required.</p>
+</details>
+<details>
+<summary>What application materials are required?</summary>
+<p>For the M.S., applicants submit transcripts, a resume or CV, a personal statement, a statement of intent, three letters of recommendation, and English proficiency documentation when applicable. The Graduate Certificate requires an accredited bachelor's degree, transcripts, a resume or CV, and English proficiency documentation when applicable. Expand the Application Requirements under each program above for the full details.</p>
+</details>
+<details>
+<summary>What kinds of jobs can Urban Analytics prepare me for?</summary>
+<p>Possible job directions include Data Analyst, City Planner, Urban Designer, Consultant, Transportation Planner or Engineer, and Environmental Planner. The exact role depends on your prior degree, technical electives, research focus, internship experience, and any professional credentials required by the employer.</p>
+</details>
+</div>
+</section>
+</main>
+<footer><div class="container"><strong>University of Florida · Department of Urban &amp; Regional Planning</strong><p>Urban Analytics at the University of Florida combines planning, spatial analysis, computing, and artificial intelligence across an interdisciplinary academic environment.</p></div></footer>
+<dialog aria-labelledby="curriculum-viewer-heading" class="curriculum-viewer" id="curriculum-viewer">
+<div class="curriculum-toolbar">
+<div class="curriculum-toolbar-main">
+<button autofocus="" class="curriculum-back" id="curriculum-back" type="button">← Back to Urban Analytics</button>
+<div>
+<h2 class="curriculum-viewer-heading" id="curriculum-viewer-heading">Curriculum</h2>
+<span class="curriculum-source-name" id="curriculum-source-name"></span>
+</div>
+</div>
+<a class="curriculum-download" href="#" id="curriculum-download">Save curriculum HTML</a>
+</div>
+<iframe class="curriculum-frame" id="curriculum-frame" sandbox="allow-scripts" title="Detailed curriculum"></iframe>
+</dialog>
+<div aria-live="polite" class="sr-only" id="curriculum-status" role="status"></div>
+<script id="curriculum-source-files" type="application/json">{"msua":{"filename":"20260921_Curriculum_MSUA.html","title":"M.S. in Urban Analytics: Curriculum","encoding":"base64","sha256":"b5420a61feffcf1e91fc5f64d539f8dcd3de996870efa7f95cf2a43d3aa5096c","content":"PCFkb2N0eXBlIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij48bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPjx0aXRsZT5NU1VBIFByb2dyYW0gUmVxdWlyZW1lbnRzIHwgU2VsZi1Db250YWluZWQgSFRNTDwvdGl0bGU+PG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IlNlbGYtY29udGFpbmVkIE1TVUEgY3VycmljdWx1bSByZXZpZXcgZHJhZnQsIGluY2x1ZGluZyBwcm9ncmFtIHJlcXVpcmVtZW50cywgY291cnNlIHRhYmxlcywgcG9saWNpZXMsIGFuZCBtb2RlbCBzZW1lc3RlciBwbGFucy4gQWxsIHBhZ2UgY29udGVudCBhbmQgc3R5bGluZyBhcmUgZW1iZWRkZWQgZm9yIG9mZmxpbmUgdXNlLiI+PHN0eWxlPgo6cm9vdCB7IGNvbG9yLXNjaGVtZTogbGlnaHQ7IC0taW5rOiMxMDEwMTA7IC0tbXV0ZWQ6IzRjNGM0YzsgLS1saW5lOiNkZWRlZGU7IC0tc3RyaXBlOiNmNGYzZjA7IH0KKiB7IGJveC1zaXppbmc6Ym9yZGVyLWJveDsgfQpib2R5IHsgbWFyZ2luOjA7IGZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmOyBjb2xvcjp2YXIoLS1pbmspOyBiYWNrZ3JvdW5kOiNmZmY7IGZvbnQtc2l6ZToxNnB4OyBsaW5lLWhlaWdodDoxLjU4OyB9CmEgeyBjb2xvcjojMDA1Mjg4OyB0ZXh0LXVuZGVybGluZS1vZmZzZXQ6M3B4OyB9CmE6Zm9jdXMtdmlzaWJsZSxzdW1tYXJ5OmZvY3VzLXZpc2libGUsLnRhYmxlLXNjcm9sbDpmb2N1cy12aXNpYmxlIHsgb3V0bGluZTozcHggc29saWQgIzAwNTI4ODsgb3V0bGluZS1vZmZzZXQ6NHB4OyB9Ci5za2lwIHsgcG9zaXRpb246YWJzb2x1dGU7IGxlZnQ6LTk5OTlweDsgfSAuc2tpcDpmb2N1cyB7IGxlZnQ6MjBweDsgdG9wOjEycHg7IGJhY2tncm91bmQ6d2hpdGU7IHBhZGRpbmc6MTJweDsgei1pbmRleDo1OyB9Cm1haW4geyBtYXgtd2lkdGg6MTA4MHB4OyBtYXJnaW46MCBhdXRvOyBwYWRkaW5nOjQ0cHggMzhweCA1NXB4OyB9Ci5leWVicm93IHsgZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgZ2FwOjE4cHg7IGZvbnQtc2l6ZToxMnB4OyBmb250LXdlaWdodDo3MDA7IHRleHQtdHJhbnNmb3JtOnVwcGVyY2FzZTsgbGV0dGVyLXNwYWNpbmc6MS4zcHg7IHBhZGRpbmctYm90dG9tOjE1cHg7IGJvcmRlci1ib3R0b206MnB4IHNvbGlkICMxNzE3MTc7IH0KLmRyYWZ0IHsgd2hpdGUtc3BhY2U6bm93cmFwOyB9CmgxIHsgZm9udC1zaXplOjM1cHg7IGxpbmUtaGVpZ2h0OjEuMTY7IGxldHRlci1zcGFjaW5nOi0uN3B4OyBtYXJnaW46MzBweCAwIDE0cHg7IH0KaDIgeyBmb250LXNpemU6MjVweDsgbGluZS1oZWlnaHQ6MS4yNTsgbWFyZ2luOjQ1cHggMCAxNnB4OyB9CmgzIHsgZm9udC1zaXplOjE5cHg7IGxpbmUtaGVpZ2h0OjEuMzU7IG1hcmdpbjoyOHB4IDAgMTJweDsgfQpwIHsgbWFyZ2luOjEwcHggMCAxNnB4OyB9Ci5sZWFkIHsgZm9udC1zaXplOjE4cHg7IG1heC13aWR0aDo5NDBweDsgfQouanVtcCB7IGRpc3BsYXk6ZmxleDsgZmxleC13cmFwOndyYXA7IGdhcDo5cHggMjRweDsgbWFyZ2luOjI0cHggMCAyNnB4OyBwYWRkaW5nLWJvdHRvbToxOHB4OyBib3JkZXItYm90dG9tOjFweCBzb2xpZCB2YXIoLS1saW5lKTsgZm9udC1zaXplOjE0cHg7IH0KLnJldmlldy1iYW5uZXIgeyBib3JkZXItbGVmdDozcHggc29saWQgIzc3NzsgYmFja2dyb3VuZDojZjVmNWY1OyBwYWRkaW5nOjEycHggMTZweDsgbWFyZ2luOjAgMCAyNHB4OyBmb250LXNpemU6MTRweDsgfQoubW9iaWxlLWhpbnQgeyBkaXNwbGF5Om5vbmU7IH0KLnRhYmxlLXNjcm9sbCB7IHdpZHRoOjEwMCU7IG92ZXJmbG93LXg6YXV0bzsgbWFyZ2luOjEycHggMCAxOHB4OyB9CnRhYmxlIHsgd2lkdGg6MTAwJTsgYm9yZGVyLWNvbGxhcHNlOmNvbGxhcHNlOyB0YWJsZS1sYXlvdXQ6Zml4ZWQ7IHRleHQtYWxpZ246bGVmdDsgZm9udC1zaXplOjE1cHg7IH0KdGgsdGQgeyBwYWRkaW5nOjE1cHggMTZweDsgdmVydGljYWwtYWxpZ246dG9wOyBvdmVyZmxvdy13cmFwOmFueXdoZXJlOyB9CnRoZWFkIHRoIHsgd2hpdGUtc3BhY2U6bm93cmFwOyBib3JkZXItYm90dG9tOjFweCBzb2xpZCAjYjliOWI5OyBmb250LXdlaWdodDo3MDA7IGZvbnQtc2l6ZToxNHB4OyB9CnRib2R5IHRoIHsgZm9udC13ZWlnaHQ6NDAwOyB9CnRib2R5IHRyOm50aC1jaGlsZChldmVuKSB7IGJhY2tncm91bmQ6dmFyKC0tc3RyaXBlKTsgfQoub3ZlcnZpZXcgdGJvZHkgdGggeyBmb250LXdlaWdodDo3MDA7IH0KLm92ZXJ2aWV3IHRoOm50aC1jaGlsZCgxKSB7IHdpZHRoOjMxJTsgfSAub3ZlcnZpZXcgdGg6bnRoLWNoaWxkKDIpIHsgd2lkdGg6MTMlOyB9Ci5jb3Vyc2VzIHRoOm50aC1jaGlsZCgxKSB7IHdpZHRoOjEzJTsgfSAuY291cnNlcyB0aDpudGgtY2hpbGQoMikgeyB3aWR0aDo1NCU7IH0gLmNvdXJzZXMgdGg6bnRoLWNoaWxkKDMpIHsgd2lkdGg6MTElOyB9Ci5jb3Vyc2VzIHRib2R5IHRoIHsgd2hpdGUtc3BhY2U6bm93cmFwOyB9Ci5wbGFuIHRoOm50aC1jaGlsZCgxKSB7IHdpZHRoOjI0JTsgfSAucGxhbiB0aDpudGgtY2hpbGQoMikgeyB3aWR0aDo2NiU7IH0gLnBsYW4gdGg6bnRoLWNoaWxkKDMpIHsgd2lkdGg6MTAlOyB9Ci5wbGFuIHRib2R5IHRoIHsgZm9udC13ZWlnaHQ6NzAwOyB9Ci5zbWFsbGNvdXJzZXMgdGg6bnRoLWNoaWxkKDEpIHsgd2lkdGg6MjAlOyB9IC5zbWFsbGNvdXJzZXMgdGg6bnRoLWNoaWxkKDIpIHsgd2lkdGg6NjUlOyB9Ci50b3RhbCB7IGJvcmRlci10b3A6MXB4IHNvbGlkICNiOWI5Yjk7IGZvbnQtd2VpZ2h0OjcwMDsgfQoudG90YWwgdGggeyBmb250LXdlaWdodDo3MDA7IH0KLm5vdGUgeyBjb2xvcjp2YXIoLS1tdXRlZCk7IGZvbnQtc2l6ZToxM3B4OyBsaW5lLWhlaWdodDoxLjU1OyB9Ci5ub3RlcyB7IHBhZGRpbmc6MDsgbWFyZ2luOjE1cHggMDsgfQoubm90ZXMgcCB7IG1hcmdpbjo3cHggMDsgZm9udC1zaXplOjE0cHg7IH0KLnJ1bGUgeyBmb250LXNpemU6MTVweDsgfQoucmV2aWV3IHsgbWFyZ2luLXRvcDozOHB4OyBwYWRkaW5nOjIwcHggMjJweDsgYm9yZGVyOjFweCBzb2xpZCAjY2NjOyBiYWNrZ3JvdW5kOiNmYWZhZmE7IH0KLnJldmlldyBoMiB7IGZvbnQtc2l6ZToyMHB4OyBtYXJnaW46MCAwIDEycHg7IH0KLnJldmlldyBwIHsgZm9udC1zaXplOjE0cHg7IG1hcmdpbjoxMnB4IDA7IH0KZm9vdGVyIHsgbWFyZ2luLXRvcDozMHB4OyBwYWRkaW5nLXRvcDoxN3B4OyBib3JkZXItdG9wOjFweCBzb2xpZCAjZGRkOyBmb250LXNpemU6MTJweDsgY29sb3I6dmFyKC0tbXV0ZWQpOyB9CnNlY3Rpb24geyBzY3JvbGwtbWFyZ2luLXRvcDoyMHB4OyB9CkBtZWRpYShtYXgtd2lkdGg6NjUwcHgpey5tb2JpbGUtaGludHtkaXNwbGF5OmJsb2NrO2ZvbnQtc2l6ZToxMnB4O2NvbG9yOiM1NTU7bWFyZ2luOjEycHggMCAwO31tYWlue3BhZGRpbmc6MjNweCAxOHB4IDM1cHg7fSBoMXtmb250LXNpemU6MjlweDt9IGgye2ZvbnQtc2l6ZToyM3B4O30gLmV5ZWJyb3d7Zm9udC1zaXplOjEwcHg7bGV0dGVyLXNwYWNpbmc6LjhweDt9IC5sZWFke2ZvbnQtc2l6ZToxNnB4O30gdGgsdGR7cGFkZGluZzoxMXB4IDEycHg7fSB0YWJsZXttaW4td2lkdGg6NjEwcHg7fSAub3ZlcnZpZXd7bWluLXdpZHRoOjUyMHB4O30gLnBsYW57bWluLXdpZHRoOjU5MHB4O30gLnNtYWxsY291cnNlc3ttaW4td2lkdGg6NDkwcHg7fSAuanVtcHtnYXA6OXB4IDE2cHg7fSAucmV2aWV3e3BhZGRpbmc6MTZweDt9fQpAbWVkaWEgcHJpbnQge21haW57bWF4LXdpZHRoOm5vbmU7cGFkZGluZzowO30gLmp1bXAsLnNraXB7ZGlzcGxheTpub25lO30gYm9keXtmb250LXNpemU6MTBwdDt9IGgxe2ZvbnQtc2l6ZToyM3B0O30gaDJ7Zm9udC1zaXplOjE3cHQ7fSBoM3tmb250LXNpemU6MTNwdDt9IHRhYmxle2ZvbnQtc2l6ZTo5cHQ7fSB0aCx0ZHtwYWRkaW5nOjhweDt9IC50YWJsZS1zY3JvbGx7b3ZlcmZsb3c6dmlzaWJsZTt9IHRoZWFke2Rpc3BsYXk6dGFibGUtaGVhZGVyLWdyb3VwO30gdHJ7YnJlYWstaW5zaWRlOmF2b2lkO30gaDIsaDN7YnJlYWstYWZ0ZXI6YXZvaWQ7fSAucmV2aWV3e2JyZWFrLWluc2lkZTphdm9pZDt9fQo8L3N0eWxlPjwvaGVhZD48Ym9keT4KPGEgY2xhc3M9InNraXAiIGhyZWY9IiNtYWluIj5Ta2lwIHRvIGN1cnJpY3VsdW0gY29udGVudDwvYT48bWFpbiBpZD0ibWFpbiI+CjxkaXYgY2xhc3M9ImV5ZWJyb3ciPjxzcGFuPlVuaXZlcnNpdHkgb2YgRmxvcmlkYSDCtyBVcmJhbiBBbmFseXRpY3M8L3NwYW4+PHNwYW4gY2xhc3M9ImRyYWZ0Ij5Db250ZW50IHJldmlldyBkcmFmdDwvc3Bhbj48L2Rpdj4KPGhlYWRlcj48aDE+TVNVQSBQcm9ncmFtIFJlcXVpcmVtZW50czwvaDE+PHAgY2xhc3M9ImxlYWQiPlRoZSBNYXN0ZXIgb2YgU2NpZW5jZSBpbiBVcmJhbiBBbmFseXRpY3MgKE1TVUEpIHJlcXVpcmVzIHRoZSBjb21wbGV0aW9uIG9mIDMwIGNyZWRpdHMuIFRoZSBjdXJyaWN1bHVtIGluY2x1ZGVzIHJlcXVpcmVkIGNvcmUgY291cnNlcyAtIGluY2x1ZGluZyBhIDYtY3JlZGl0IE1hc3RlciBSZXNlYXJjaCBQcm9qZWN0IC0gYW5kIGVsZWN0aXZlcyBpbiB1cmJhbiBhbmQgcmVnaW9uYWwgcGxhbm5pbmcgYW5kIG1hY2hpbmUgbGVhcm5pbmcuPC9wPjwvaGVhZGVyPgo8bmF2IGNsYXNzPSJqdW1wIiBhcmlhLWxhYmVsPSJDdXJyaWN1bHVtIHNlY3Rpb25zIj48YSBocmVmPSIjb3ZlcnZpZXciPlJlcXVpcmVtZW50cyBvdmVydmlldzwvYT48YSBocmVmPSIjY29yZSI+Q29yZSBjb3Vyc2VzPC9hPjxhIGhyZWY9IiNlbGVjdGl2ZXMiPkVsZWN0aXZlczwvYT48YSBocmVmPSIjcGxhbnMiPk1vZGVsIHNlbWVzdGVyIHBsYW48L2E+PC9uYXY+CjxzZWN0aW9uIGlkPSJvdmVydmlldyI+PGgyPlByb2dyYW0gUmVxdWlyZW1lbnRzIGF0IGEgR2xhbmNlPC9oMj4KPHAgY2xhc3M9Im1vYmlsZS1oaW50Ij5Td2lwZSBob3Jpem9udGFsbHkgdG8gdmlldyBhbGwgdGFibGUgY29sdW1ucy48L3A+PGRpdiBjbGFzcz0idGFibGUtc2Nyb2xsIiB0YWJpbmRleD0iMCIgcm9sZT0icmVnaW9uIiBhcmlhLWxhYmVsPSJQcm9ncmFtIHJlcXVpcmVtZW50cyBvdmVydmlldyI+PHRhYmxlIGNsYXNzPSJvdmVydmlldyI+PHRoZWFkPjx0cj48dGggc2NvcGU9ImNvbCI+UmVxdWlyZW1lbnQ8L3RoPjx0aCBzY29wZT0iY29sIj5DcmVkaXRzPC90aD48dGggc2NvcGU9ImNvbCI+RGV0YWlsczwvdGg+PC90cj48L3RoZWFkPjx0Ym9keT48dHI+PHRoIHNjb3BlPSJyb3ciPlJlcXVpcmVkIENvcmUgQ291cnNlczwvdGg+PHRkPjE4PC90ZD48dGQ+VXJiYW4gZGF0YSBzdHJ1Y3R1cmVzLCB1cmJhbiBhbmQgcmVnaW9uYWwgcGxhbm5pbmcsIGludHJvZHVjdG9yeSBhbmQgaW50ZXJtZWRpYXRlIHVyYmFuIGFuYWx5dGljcywgYW5kIGEgNi1jcmVkaXQgTWFzdGVyIFJlc2VhcmNoIFByb2plY3QuPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+RWxlY3RpdmUgR3JvdXAgMTogVXJiYW4gYW5kIFJlZ2lvbmFsIFBsYW5uaW5nPC90aD48dGQ+NiBvciA5PC90ZD48dGQ+Q291cnNlcyBpbiBwbGFubmluZyBpbmZvcm1hdGlvbiBzeXN0ZW1zLCBnZW9zcGF0aWFsIG1vZGVsaW5nLCBzcGF0aWFsIGFuYWx5c2lzLCBhbmQgdHJhbnNwb3J0YXRpb24gYW5kIGxhbmQgdXNlIG1vZGVsaW5nLiBBIHByb3Bvc2VkIEFJIGFuZCBDaXRpZXMgY291cnNlIGlzIGFsc28gbGlzdGVkLjwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPkVsZWN0aXZlIEdyb3VwIDI6IE1hY2hpbmUgTGVhcm5pbmcgKE1MKTwvdGg+PHRkPjYgb3IgOTwvdGQ+PHRkPkNvdXJzZXMgaW4gbWFjaGluZSBsZWFybmluZywgcGF0dGVybiByZWNvZ25pdGlvbiwgaW50ZWxsaWdlbnQgc3lzdGVtcywgYW5kIHJlbGF0ZWQgYXBwbGljYXRpb25zLjwvdGQ+PC90cj48dHIgY2xhc3M9InRvdGFsIj48dGggc2NvcGU9InJvdyI+VG90YWwgUmVxdWlyZWQgQ3JlZGl0czwvdGg+PHRkPjMwPC90ZD48dGQ+VGhlIHJlcXVpcmVkIGVsZWN0aXZlIGFsbG9jYXRpb24gZGVwZW5kcyBvbiB0aGUgc3R1ZGVudOKAmXMgYWNhZGVtaWMgYmFja2dyb3VuZDsgc2VlIHRoZSBncm91cC1zcGVjaWZpYyBydWxlcyBiZWxvdy48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPjwvZGl2Pgo8cCBjbGFzcz0ibm90ZSI+VGhlIGZpdmUgbGlzdGVkIHJlcXVpcmVkIGNvcmUgY291cnNlcyB0b3RhbCAxOCBjcmVkaXRzIGJlZm9yZSBhbnkgYXBwbGljYWJsZSBjb3Vyc2Ugd2FpdmVycy48L3A+PC9zZWN0aW9uPgo8c2VjdGlvbiBpZD0iY29yZSI+PGgyPlJlcXVpcmVkIENvcmUgQ291cnNlczwvaDI+PHA+PHN0cm9uZz4xOCBjcmVkaXRzPC9zdHJvbmc+LjwvcD4KPHAgY2xhc3M9Im1vYmlsZS1oaW50Ij5Td2lwZSBob3Jpem9udGFsbHkgdG8gdmlldyBhbGwgdGFibGUgY29sdW1ucy48L3A+PGRpdiBjbGFzcz0idGFibGUtc2Nyb2xsIiB0YWJpbmRleD0iMCIgcm9sZT0icmVnaW9uIiBhcmlhLWxhYmVsPSJSZXF1aXJlZCBjb3JlIGNvdXJzZXMiPjx0YWJsZSBjbGFzcz0iY291cnNlcyI+PHRoZWFkPjx0cj48dGggc2NvcGU9ImNvbCI+Q291cnNlPC90aD48dGggc2NvcGU9ImNvbCI+VGl0bGU8L3RoPjx0aCBzY29wZT0iY29sIj5DcmVkaXRzPC90aD48dGggc2NvcGU9ImNvbCI+VGVybTwvdGg+PC90cj48L3RoZWFkPjx0Ym9keT48dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2Mjk1PC90aD48dGQ+VXJiYW4gRGF0YSBTdHJ1Y3R1cmVzIEJhc2ljc8K5PC90ZD48dGQ+MzwvdGQ+PHRkPkZhbGw8L3RkPjwvdHI+PHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjAwNzwvdGg+PHRkPlN1cnZleSBpbiBVcmJhbiBhbmQgUmVnaW9uYWwgUGxhbm5pbmfCsjwvdGQ+PHRkPjM8L3RkPjx0ZD5GYWxsPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+VVJQIDYyMjM8L3RoPjx0ZD5JbnRyb2R1Y3Rpb24gdG8gVXJiYW4gQW5hbHl0aWNzwrM8L3RkPjx0ZD4zPC90ZD48dGQ+RmFsbDwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2MjI0PC90aD48dGQ+SW50ZXJtZWRpYXRlIFVyYmFuIEFuYWx5dGljczwvdGQ+PHRkPjM8L3RkPjx0ZD5TcHJpbmc8L3RkPjwvdHI+PHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjk3OTwvdGg+PHRkPk1hc3RlciBSZXNlYXJjaCBQcm9qZWN04oG0PC90ZD48dGQ+NjwvdGQ+PHRkPkZhbGwgYW5kIFNwcmluZ+KBtDwvdGQ+PC90cj48L3Rib2R5PjwvdGFibGU+PC9kaXY+CjxkaXYgY2xhc3M9Im5vdGVzIj48cD48c3Ryb25nPjEuIFVSUCA2Mjk1Ojwvc3Ryb25nPiBXYWl2ZWQgZm9yIHN0dWRlbnRzIHdpdGggYSBjb21wdXRlciBzY2llbmNlIG9yIHNpbWlsYXIgYmFja2dyb3VuZC48L3A+PHA+PHN0cm9uZz4yLiBVUlAgNjAwNzo8L3N0cm9uZz4gV2FpdmVkIGZvciBzdHVkZW50cyB3aXRoIGEgcGxhbm5pbmcgb3Igc2ltaWxhciBiYWNrZ3JvdW5kLjwvcD48cD48c3Ryb25nPjMuIFVSUCA2MjIzOjwvc3Ryb25nPiBNYXkgYmUgcmVwbGFjZWQgYnkgVVJQIDY5MzEg4oCTIEFydGlmaWNpYWwgSW50ZWxsaWdlbmNlIGluIHRoZSBCdWlsdCBFbnZpcm9ubWVudCB3aXRoIHBlcm1pc3Npb24gZnJvbSB0aGUgcHJvZ3JhbSBjb29yZGluYXRvci48L3A+PHA+PHN0cm9uZz40LiBVUlAgNjk3OTo8L3N0cm9uZz4gSWRlYWxseSBjb21wbGV0ZWQgYXMgMyBjcmVkaXRzIGluIGEgZmFsbCBzZW1lc3RlciBhbmQgMyBjcmVkaXRzIGluIGEgc3ByaW5nIHNlbWVzdGVyLjwvcD48L2Rpdj48L3NlY3Rpb24+CjxzZWN0aW9uIGlkPSJlbGVjdGl2ZXMiPjxoMj5FbGVjdGl2ZSBDb3Vyc2UgR3JvdXBzPC9oMj48aDM+R3JvdXAgMTogVXJiYW4gYW5kIFJlZ2lvbmFsIFBsYW5uaW5nIC0gNiBvciA5IGNyZWRpdHM8L2gzPgo8cCBjbGFzcz0icnVsZSI+OSBjcmVkaXRzIGFyZSByZXF1aXJlZCBmb3Igc3R1ZGVudHMgd2l0aG91dCBhbiB1cmJhbiBwbGFubmluZyBiYWNrZ3JvdW5kOyA2IGNyZWRpdHMgYXJlIHJlcXVpcmVkIGZvciBzdHVkZW50cyB3aXRoIGFuIHVyYmFuIHBsYW5uaW5nIG9yIHNpbWlsYXIgYmFja2dyb3VuZC48L3A+CjxwIGNsYXNzPSJtb2JpbGUtaGludCI+U3dpcGUgaG9yaXpvbnRhbGx5IHRvIHZpZXcgYWxsIHRhYmxlIGNvbHVtbnMuPC9wPjxkaXYgY2xhc3M9InRhYmxlLXNjcm9sbCIgdGFiaW5kZXg9IjAiIHJvbGU9InJlZ2lvbiIgYXJpYS1sYWJlbD0iVXJiYW4gYW5kIHJlZ2lvbmFsIHBsYW5uaW5nIGVsZWN0aXZlcyI+PHRhYmxlIGNsYXNzPSJjb3Vyc2VzIj48dGhlYWQ+PHRyPjx0aCBzY29wZT0iY29sIj5Db3Vyc2U8L3RoPjx0aCBzY29wZT0iY29sIj5UaXRsZTwvdGg+PHRoIHNjb3BlPSJjb2wiPkNyZWRpdHM8L3RoPjx0aCBzY29wZT0iY29sIj5UZXJtPC90aD48L3RyPjwvdGhlYWQ+PHRib2R5Pjx0cj48dGggc2NvcGU9InJvdyI+VVJQIDYyNzA8L3RoPjx0ZD5JbnRyb2R1Y3Rpb24gdG8gUGxhbm5pbmcgSW5mb3JtYXRpb24gU3lzdGVtczwvdGQ+PHRkPjM8L3RkPjx0ZD5GYWxsPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+VVJQIDYyNzE8L3RoPjx0ZD5BdXRvbWF0aW9uIGZvciBHZW9zcGF0aWFsIE1vZGVsaW5nIGFuZCBBbmFseXNpczwvdGQ+PHRkPjM8L3RkPjx0ZD5UbyBiZSBkZXRlcm1pbmVkPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+VVJQIDYyNzI8L3RoPjx0ZD5VcmJhbiBTcGF0aWFsIEFuYWx5c2lzPC90ZD48dGQ+MzwvdGQ+PHRkPlNwcmluZzwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2ODIxPC90aD48dGQ+VHJhbnNwb3J0YXRpb24gYW5kIExhbmQgVXNlIE1vZGVsaW5nPC90ZD48dGQ+MzwvdGQ+PHRkPlNwcmluZzwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2WFhYPC90aD48dGQ+QUkgYW5kIENpdGllczogSG93IE1hY2hpbmVzIFNlZSwgUmVhZCwgYW5kIFNoYXBlIFVyYmFuIEZ1dHVyZXMgKG5ldyBjb3Vyc2UgcHJvcG9zYWwpPC90ZD48dGQ+Tm90IHNwZWNpZmllZDwvdGQ+PHRkPlByb3Bvc2VkIGZvciBGYWxsIDIwMjc8L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPjwvZGl2Pgo8aDM+R3JvdXAgMjogTWFjaGluZSBMZWFybmluZyAoTUwpIC0gNiBvciA5IGNyZWRpdHM8L2gzPgo8cCBjbGFzcz0icnVsZSI+OSBjcmVkaXRzIGFyZSByZXF1aXJlZCBmb3Igc3R1ZGVudHMgd2l0aG91dCBhIGNvbXB1dGVyIHNjaWVuY2UgYmFja2dyb3VuZDsgNiBjcmVkaXRzIGFyZSByZXF1aXJlZCBmb3Igc3R1ZGVudHMgd2l0aCBhIGNvbXB1dGVyIHNjaWVuY2UgYmFja2dyb3VuZC48L3A+CjxwIGNsYXNzPSJtb2JpbGUtaGludCI+U3dpcGUgaG9yaXpvbnRhbGx5IHRvIHZpZXcgYWxsIHRhYmxlIGNvbHVtbnMuPC9wPjxkaXYgY2xhc3M9InRhYmxlLXNjcm9sbCIgdGFiaW5kZXg9IjAiIHJvbGU9InJlZ2lvbiIgYXJpYS1sYWJlbD0iTWFjaGluZSBsZWFybmluZyBlbGVjdGl2ZXMiPjx0YWJsZSBjbGFzcz0iY291cnNlcyI+PHRoZWFkPjx0cj48dGggc2NvcGU9ImNvbCI+Q291cnNlPC90aD48dGggc2NvcGU9ImNvbCI+VGl0bGU8L3RoPjx0aCBzY29wZT0iY29sIj5DcmVkaXRzPC90aD48dGggc2NvcGU9ImNvbCI+VGVybTwvdGg+PC90cj48L3RoZWFkPjx0Ym9keT48dHI+PHRoIHNjb3BlPSJyb3ciPkVFTCA1ODQwPC90aD48dGQ+RnVuZGFtZW50YWxzIG9mIE1hY2hpbmUgTGVhcm5pbmc8L3RkPjx0ZD4zPC90ZD48dGQ+RmFsbCBhbmQgU3ByaW5nPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+RUVMIDY4MjU8L3RoPjx0ZD5QYXR0ZXJuIFJlY29nbml0aW9uIGFuZCBJbnRlbGxpZ2VudCBTeXN0ZW1zPC90ZD48dGQ+MzwvdGQ+PHRkPkZhbGw8L3RkPjwvdHI+PHRyPjx0aCBzY29wZT0icm93Ij5BUkMgNjkyMjwvdGg+PHRkPk1hY2hpbmUgTGVhcm5pbmcgZm9yIEFyY2hpdGVjdHM8L3RkPjx0ZD4zPC90ZD48dGQ+RmFsbDwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPkNBUCA2NjEwPC90aD48dGQ+TWFjaGluZSBMZWFybmluZzwvdGQ+PHRkPjM8L3RkPjx0ZD5TcHJpbmc8L3RkPjwvdHI+PHRyPjx0aCBzY29wZT0icm93Ij5BQkUgNjkzMzwvdGg+PHRkPkFwcGxpZWQgU3RhdGlzdGljYWwgTWFjaGluZSBMZWFybmluZzwvdGQ+PHRkPjM8L3RkPjx0ZD5GYWxsPC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L2Rpdj4KPGgzPkFkZGl0aW9uYWwgQ291cnNlIFBvbGljaWVzPC9oMz48cD5TdHVkZW50cyBtYXkgY291bnQgdXAgdG8gdHdvIDMwMDAtIG9yIDQwMDAtbGV2ZWwgY291cnNlcyAoNiBjcmVkaXRzIG1heGltdW0pIGZyb20gZGVwYXJ0bWVudHMgb3RoZXIgdGhhbiBVUlAgdG93YXJkIGdyYWR1YXRlIGNyZWRpdC4gVGhlIHNvdXJjZSByZWNvbW1lbmRzIHRoZSBmb2xsb3dpbmcgZm9yIHN0dWRlbnRzIHdpdGhvdXQgYSBjb21wdXRlciBzY2llbmNlIGJhY2tncm91bmQ6PC9wPgo8cCBjbGFzcz0ibW9iaWxlLWhpbnQiPlN3aXBlIGhvcml6b250YWxseSB0byB2aWV3IGFsbCB0YWJsZSBjb2x1bW5zLjwvcD48ZGl2IGNsYXNzPSJ0YWJsZS1zY3JvbGwiIHRhYmluZGV4PSIwIiByb2xlPSJyZWdpb24iIGFyaWEtbGFiZWw9IlJlY29tbWVuZGVkIGFkZGl0aW9uYWwgY291cnNlcyI+PHRhYmxlIGNsYXNzPSJzbWFsbGNvdXJzZXMiPjx0aGVhZD48dHI+PHRoIHNjb3BlPSJjb2wiPkNvdXJzZTwvdGg+PHRoIHNjb3BlPSJjb2wiPlRpdGxlPC90aD48dGggc2NvcGU9ImNvbCI+Q3JlZGl0czwvdGg+PC90cj48L3RoZWFkPjx0Ym9keT48dHI+PHRoIHNjb3BlPSJyb3ciPkNPUCAzNTAyPC90aD48dGQ+UHJvZ3JhbW1pbmcgRnVuZGFtZW50YWxzIDE8L3RkPjx0ZD4zPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+RUVMIDM4NTA8L3RoPjx0ZD5EYXRhIFNjaWVuY2UgZm9yIEVDRTwvdGQ+PHRkPjM8L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPjwvZGl2Pgo8cD5BbHRlcm5hdGl2ZSBlbGVjdGl2ZSBjb3Vyc2VzIHJlcXVpcmUgYXBwcm92YWwgZnJvbSB0aGUgcHJvZ3JhbSBjb29yZGluYXRvci48L3A+PC9zZWN0aW9uPgo8c2VjdGlvbiBpZD0icGxhbnMiPjxoMj5Nb2RlbCBTZW1lc3RlciBQbGFuPC9oMj48cD5UaGUgZm9sbG93aW5nIHBsYW5zIHJlcHJvZHVjZSB0aGUgY291cnNlIHNlcXVlbmNlIHNob3duIGluIHRoZSBzb3VyY2UuIOKAnEdyb3VwIDHigJ0gcmVmZXJzIHRvIHVyYmFuIGFuZCByZWdpb25hbCBwbGFubmluZyBlbGVjdGl2ZXM7IOKAnEdyb3VwIDLigJ0gcmVmZXJzIHRvIG1hY2hpbmUgbGVhcm5pbmcgZWxlY3RpdmVzLjwvcD4KPGgzPlN0dWRlbnRzIEJlZ2lubmluZyBpbiBGYWxsPC9oMz4KPHAgY2xhc3M9Im1vYmlsZS1oaW50Ij5Td2lwZSBob3Jpem9udGFsbHkgdG8gdmlldyBhbGwgdGFibGUgY29sdW1ucy48L3A+PGRpdiBjbGFzcz0idGFibGUtc2Nyb2xsIiB0YWJpbmRleD0iMCIgcm9sZT0icmVnaW9uIiBhcmlhLWxhYmVsPSJNb2RlbCBwbGFuIGZvciBmYWxsLWVudHJ5IHN0dWRlbnRzIj48dGFibGUgY2xhc3M9InBsYW4iPjx0aGVhZD48dHI+PHRoIHNjb3BlPSJjb2wiPlNlbWVzdGVyPC90aD48dGggc2NvcGU9ImNvbCI+Q291cnNlczwvdGg+PHRoIHNjb3BlPSJjb2wiPkNyZWRpdHM8L3RoPjwvdHI+PC90aGVhZD48dGJvZHk+PHRyPjx0aCBzY29wZT0icm93Ij5GaXJzdCBzZW1lc3RlcjogRmFsbDwvdGg+PHRkPlVSUCA2Mjk1IG9yIFVSUCA2MDA3IC0gbGV2ZWxpbmcgY291cnNlICgzIGNyZWRpdHMpPGJyPlVSUCA2MjIzICgzIGNyZWRpdHMpPGJyPkVsZWN0aXZlIEdyb3VwIDEgKDMgY3JlZGl0cyk8YnI+RWxlY3RpdmUgR3JvdXAgMiAoMyBjcmVkaXRzKTwvdGQ+PHRkPjEyPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+U2Vjb25kIHNlbWVzdGVyOiBTcHJpbmc8L3RoPjx0ZD5VUlAgNjIyNCAoMyBjcmVkaXRzKTxicj5VUlAgNjk3OSAoMyBjcmVkaXRzKTxicj5FbGVjdGl2ZSBHcm91cCAxICgzIGNyZWRpdHMpPGJyPkVsZWN0aXZlIEdyb3VwIDIgKDMgY3JlZGl0cyk8L3RkPjx0ZD4xMjwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPlRoaXJkIHNlbWVzdGVyOiBGYWxsPC90aD48dGQ+VVJQIDY5NzkgKDMgY3JlZGl0cyk8YnI+RWxlY3RpdmUgR3JvdXAgMSBvciAyICgzIGNyZWRpdHMpPC90ZD48dGQ+NjwvdGQ+PC90cj48dHIgY2xhc3M9InRvdGFsIj48dGggc2NvcGU9InJvdyI+VG90YWw8L3RoPjx0ZD48L3RkPjx0ZD4zMDwvdGQ+PC90cj48L3Rib2R5PjwvdGFibGU+PC9kaXY+CjxoMz5TdHVkZW50cyBCZWdpbm5pbmcgaW4gU3ByaW5nPC9oMz4KPHAgY2xhc3M9Im1vYmlsZS1oaW50Ij5Td2lwZSBob3Jpem9udGFsbHkgdG8gdmlldyBhbGwgdGFibGUgY29sdW1ucy48L3A+PGRpdiBjbGFzcz0idGFibGUtc2Nyb2xsIiB0YWJpbmRleD0iMCIgcm9sZT0icmVnaW9uIiBhcmlhLWxhYmVsPSJNb2RlbCBwbGFuIGZvciBzcHJpbmctZW50cnkgc3R1ZGVudHMiPjx0YWJsZSBjbGFzcz0icGxhbiI+PHRoZWFkPjx0cj48dGggc2NvcGU9ImNvbCI+U2VtZXN0ZXI8L3RoPjx0aCBzY29wZT0iY29sIj5Db3Vyc2VzPC90aD48dGggc2NvcGU9ImNvbCI+Q3JlZGl0czwvdGg+PC90cj48L3RoZWFkPjx0Ym9keT48dHI+PHRoIHNjb3BlPSJyb3ciPkZpcnN0IHNlbWVzdGVyOiBTcHJpbmc8L3RoPjx0ZD5FbGVjdGl2ZSBHcm91cCAxICg2IGNyZWRpdHMpPGJyPkVsZWN0aXZlIEdyb3VwIDIgKDYgY3JlZGl0cyk8L3RkPjx0ZD4xMjwvdGQ+PC90cj48dHI+PHRoIHNjb3BlPSJyb3ciPlNlY29uZCBzZW1lc3RlcjogRmFsbDwvdGg+PHRkPlVSUCA2Mjk1IG9yIFVSUCA2MDA3IC0gbGV2ZWxpbmcgY291cnNlICgzIGNyZWRpdHMpPGJyPlVSUCA2MjIzICgzIGNyZWRpdHMpPGJyPkVsZWN0aXZlIEdyb3VwIDEgb3IgMiAoMyBjcmVkaXRzKTxicj5VUlAgNjk3OSAoMyBjcmVkaXRzKTwvdGQ+PHRkPjEyPC90ZD48L3RyPjx0cj48dGggc2NvcGU9InJvdyI+VGhpcmQgc2VtZXN0ZXI6IFNwcmluZzwvdGg+PHRkPlVSUCA2MjI0ICgzIGNyZWRpdHMpPGJyPlVSUCA2OTc5ICgzIGNyZWRpdHMpPC90ZD48dGQ+NjwvdGQ+PC90cj48dHIgY2xhc3M9InRvdGFsIj48dGggc2NvcGU9InJvdyI+VG90YWw8L3RoPjx0ZD48L3RkPjx0ZD4zMDwvdGQ+PC90cj48L3Rib2R5PjwvdGFibGU+PC9kaXY+Cjwvc2VjdGlvbj48L21haW4+PC9ib2R5PjwvaHRtbD4="},"certificate":{"filename":"20260921_Curriculum_Certificate.html","title":"Graduate Certificate in Urban Analytics: Curriculum","encoding":"base64","sha256":"4e303feea702c7a23d0b3f6d463f30caceca7b512b3817e17c618685f250492e","content":"PCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xIj4KPHRpdGxlPkdyYWR1YXRlIENlcnRpZmljYXRlIGluIFVyYmFuIEFuYWx5dGljcyB8IFByb2dyYW0gUmVxdWlyZW1lbnRzPC90aXRsZT4KPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IlNlbGYtY29udGFpbmVkIGN1cnJpY3VsdW0gcGFnZSBmb3IgdGhlIEdyYWR1YXRlIENlcnRpZmljYXRlIGluIFVyYmFuIEFuYWx5dGljcywgaW5jbHVkaW5nIE9wdGlvbiBBIGFuZCBPcHRpb24gQiByZXF1aXJlbWVudHMgYW5kIGNvbXBsZXRpb24gdGltZWZyYW1lLiI+CjxzdHlsZT4KOnJvb3QgewogIGNvbG9yLXNjaGVtZTogbGlnaHQ7CiAgLS1pbms6IzEwMTAxMDsKICAtLW11dGVkOiM0YzRjNGM7CiAgLS1saW5lOiNkZWRlZGU7CiAgLS1zdHJpcGU6I2Y0ZjNmMDsKICAtLWFjY2VudDojMDA1Mjg4OwogIC0tc29mdDojZjdmN2Y3Owp9CiogeyBib3gtc2l6aW5nOmJvcmRlci1ib3g7IH0KaHRtbCB7IHNjcm9sbC1iZWhhdmlvcjpzbW9vdGg7IH0KYm9keSB7CiAgbWFyZ2luOjA7CiAgZm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7CiAgY29sb3I6dmFyKC0taW5rKTsKICBiYWNrZ3JvdW5kOiNmZmY7CiAgZm9udC1zaXplOjE2cHg7CiAgbGluZS1oZWlnaHQ6MS41ODsKfQphIHsgY29sb3I6dmFyKC0tYWNjZW50KTsgdGV4dC11bmRlcmxpbmUtb2Zmc2V0OjNweDsgfQphOmZvY3VzLXZpc2libGUsLnRhYmxlLXNjcm9sbDpmb2N1cy12aXNpYmxlIHsgb3V0bGluZTozcHggc29saWQgdmFyKC0tYWNjZW50KTsgb3V0bGluZS1vZmZzZXQ6NHB4OyB9Ci5za2lwIHsgcG9zaXRpb246YWJzb2x1dGU7IGxlZnQ6LTk5OTlweDsgfQouc2tpcDpmb2N1cyB7IGxlZnQ6MjBweDsgdG9wOjEycHg7IGJhY2tncm91bmQ6I2ZmZjsgcGFkZGluZzoxMnB4OyB6LWluZGV4OjEwOyB9Cm1haW4geyBtYXgtd2lkdGg6MTA4MHB4OyBtYXJnaW46MCBhdXRvOyBwYWRkaW5nOjQ0cHggMzhweCA1OHB4OyB9Ci5leWVicm93IHsKICBkaXNwbGF5OmZsZXg7CiAganVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47CiAgZ2FwOjE4cHg7CiAgZm9udC1zaXplOjEycHg7CiAgZm9udC13ZWlnaHQ6NzAwOwogIHRleHQtdHJhbnNmb3JtOnVwcGVyY2FzZTsKICBsZXR0ZXItc3BhY2luZzoxLjNweDsKICBwYWRkaW5nLWJvdHRvbToxNXB4OwogIGJvcmRlci1ib3R0b206MnB4IHNvbGlkICMxNzE3MTc7Cn0KaDEgeyBmb250LXNpemU6MzVweDsgbGluZS1oZWlnaHQ6MS4xNjsgbGV0dGVyLXNwYWNpbmc6LS43cHg7IG1hcmdpbjozMHB4IDAgMTRweDsgfQpoMiB7IGZvbnQtc2l6ZToyNXB4OyBsaW5lLWhlaWdodDoxLjI1OyBtYXJnaW46NDVweCAwIDE2cHg7IH0KaDMgeyBmb250LXNpemU6MTlweDsgbGluZS1oZWlnaHQ6MS4zNTsgbWFyZ2luOjI4cHggMCAxMnB4OyB9CnAgeyBtYXJnaW46MTBweCAwIDE2cHg7IH0KLmxlYWQgeyBmb250LXNpemU6MThweDsgbWF4LXdpZHRoOjkyMHB4OyB9Ci5qdW1wIHsKICBkaXNwbGF5OmZsZXg7CiAgZmxleC13cmFwOndyYXA7CiAgZ2FwOjlweCAyNHB4OwogIG1hcmdpbjoyNHB4IDAgMjhweDsKICBwYWRkaW5nLWJvdHRvbToxOHB4OwogIGJvcmRlci1ib3R0b206MXB4IHNvbGlkIHZhcigtLWxpbmUpOwogIGZvbnQtc2l6ZToxNHB4Owp9Ci5vcHRpb24tbm90ZSB7CiAgbWFyZ2luOjIwcHggMCAyNHB4OwogIHBhZGRpbmc6MTdweCAyMHB4OwogIGJvcmRlci1sZWZ0OjNweCBzb2xpZCAjNzc3OwogIGJhY2tncm91bmQ6dmFyKC0tc29mdCk7Cn0KLm9wdGlvbi1ub3RlIHAgeyBtYXJnaW46NXB4IDA7IH0KLm1vYmlsZS1oaW50IHsgZGlzcGxheTpub25lOyB9Ci50YWJsZS1zY3JvbGwgeyB3aWR0aDoxMDAlOyBvdmVyZmxvdy14OmF1dG87IG1hcmdpbjoxMnB4IDAgMThweDsgfQp0YWJsZSB7IHdpZHRoOjEwMCU7IGJvcmRlci1jb2xsYXBzZTpjb2xsYXBzZTsgdGFibGUtbGF5b3V0OmZpeGVkOyB0ZXh0LWFsaWduOmxlZnQ7IGZvbnQtc2l6ZToxNXB4OyB9CnRoLHRkIHsgcGFkZGluZzoxNXB4IDE2cHg7IHZlcnRpY2FsLWFsaWduOnRvcDsgb3ZlcmZsb3ctd3JhcDphbnl3aGVyZTsgfQp0aGVhZCB0aCB7IHdoaXRlLXNwYWNlOm5vd3JhcDsgYm9yZGVyLWJvdHRvbToxcHggc29saWQgI2I5YjliOTsgZm9udC13ZWlnaHQ6NzAwOyBmb250LXNpemU6MTRweDsgfQp0Ym9keSB0aCB7IGZvbnQtd2VpZ2h0OjQwMDsgfQp0Ym9keSB0cjpudGgtY2hpbGQoZXZlbikgeyBiYWNrZ3JvdW5kOnZhcigtLXN0cmlwZSk7IH0KLm92ZXJ2aWV3IHRib2R5IHRoIHsgZm9udC13ZWlnaHQ6NzAwOyB9Ci5vdmVydmlldyB0aDpudGgtY2hpbGQoMSkgeyB3aWR0aDoyNSU7IH0KLm92ZXJ2aWV3IHRoOm50aC1jaGlsZCgyKSB7IHdpZHRoOjEzJTsgfQouY291cnNlcyB0aDpudGgtY2hpbGQoMSkgeyB3aWR0aDoxNiU7IH0KLmNvdXJzZXMgdGg6bnRoLWNoaWxkKDIpIHsgd2lkdGg6NjQlOyB9Ci5jb3Vyc2VzIHRoOm50aC1jaGlsZCgzKSB7IHdpZHRoOjIwJTsgfQouY291cnNlcyB0Ym9keSB0aCB7IHdoaXRlLXNwYWNlOm5vd3JhcDsgfQouc2ltcGxlY291cnNlcyB0aDpudGgtY2hpbGQoMSkgeyB3aWR0aDoxOCU7IH0KLnNpbXBsZWNvdXJzZXMgdGg6bnRoLWNoaWxkKDIpIHsgd2lkdGg6ODIlOyB9Ci5zaW1wbGVjb3Vyc2VzIHRib2R5IHRoIHsgd2hpdGUtc3BhY2U6bm93cmFwOyB9Ci50b3RhbCB7IGJvcmRlci10b3A6MXB4IHNvbGlkICNiOWI5Yjk7IGZvbnQtd2VpZ2h0OjcwMDsgfQoudG90YWwgdGggeyBmb250LXdlaWdodDo3MDA7IH0KLnJlcXVpcmVtZW50LXN1bW1hcnkgewogIGRpc3BsYXk6Z3JpZDsKICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6MWZyIDFmcjsKICBnYXA6MThweDsKICBtYXJnaW46MjBweCAwIDI4cHg7Cn0KLmNhcmQgewogIGJvcmRlcjoxcHggc29saWQgdmFyKC0tbGluZSk7CiAgcGFkZGluZzoxOHB4IDIwcHg7CiAgYmFja2dyb3VuZDojZmZmOwp9Ci5jYXJkIGgzIHsgbWFyZ2luOjAgMCA4cHg7IH0KLmNhcmQgcCB7IG1hcmdpbjo2cHggMDsgfQouY3JlZGl0LWxpbmUgeyBmb250LXdlaWdodDo3MDA7IH0KLmNvbXBsZXRpb24gewogIG1hcmdpbi10b3A6NDBweDsKICBwYWRkaW5nOjIwcHggMjJweDsKICBib3JkZXI6MXB4IHNvbGlkICNjZmNmY2Y7CiAgYmFja2dyb3VuZDojZmFmYWZhOwp9Ci5jb21wbGV0aW9uIGgyIHsgZm9udC1zaXplOjIwcHg7IG1hcmdpbjowIDAgOHB4OyB9Ci5yZXZpZXcgewogIG1hcmdpbi10b3A6MjhweDsKICBwYWRkaW5nOjE4cHggMjBweDsKICBib3JkZXI6MXB4IHNvbGlkICNkNmQ2ZDY7CiAgYmFja2dyb3VuZDojZmZmZGY4Owp9Ci5yZXZpZXcgaDIgeyBmb250LXNpemU6MTlweDsgbWFyZ2luOjAgMCAxMHB4OyB9Ci5yZXZpZXcgcCB7IGZvbnQtc2l6ZToxNHB4OyBtYXJnaW46OHB4IDA7IGNvbG9yOiMzZDNkM2Q7IH0KZm9vdGVyIHsKICBtYXJnaW4tdG9wOjMwcHg7CiAgcGFkZGluZy10b3A6MTdweDsKICBib3JkZXItdG9wOjFweCBzb2xpZCAjZGRkOwogIGZvbnQtc2l6ZToxMnB4OwogIGNvbG9yOnZhcigtLW11dGVkKTsKfQpzZWN0aW9uIHsgc2Nyb2xsLW1hcmdpbi10b3A6MjBweDsgfQpAbWVkaWEobWF4LXdpZHRoOjc2MHB4KXsKICBtYWlue3BhZGRpbmc6MjRweCAxOHB4IDM2cHg7fQogIGgxe2ZvbnQtc2l6ZToyOXB4O30KICBoMntmb250LXNpemU6MjNweDt9CiAgLmV5ZWJyb3d7Zm9udC1zaXplOjEwcHg7bGV0dGVyLXNwYWNpbmc6LjhweDt9CiAgLmxlYWR7Zm9udC1zaXplOjE2cHg7fQogIC5yZXF1aXJlbWVudC1zdW1tYXJ5e2dyaWQtdGVtcGxhdGUtY29sdW1uczoxZnI7fQogIC5tb2JpbGUtaGludHtkaXNwbGF5OmJsb2NrO2ZvbnQtc2l6ZToxMnB4O2NvbG9yOiM1NTU7bWFyZ2luOjEycHggMCAwO30KICB0aCx0ZHtwYWRkaW5nOjExcHggMTJweDt9CiAgdGFibGV7bWluLXdpZHRoOjY1MHB4O30KICAub3ZlcnZpZXd7bWluLXdpZHRoOjYyMHB4O30KICAuanVtcHtnYXA6OXB4IDE2cHg7fQp9CkBtZWRpYSBwcmludCB7CiAgbWFpbnttYXgtd2lkdGg6bm9uZTtwYWRkaW5nOjA7fQogIC5qdW1wLC5za2lwe2Rpc3BsYXk6bm9uZTt9CiAgYm9keXtmb250LXNpemU6MTBwdDt9CiAgaDF7Zm9udC1zaXplOjIzcHQ7fQogIGgye2ZvbnQtc2l6ZToxN3B0O30KICBoM3tmb250LXNpemU6MTNwdDt9CiAgdGFibGV7Zm9udC1zaXplOjlwdDt9CiAgdGgsdGR7cGFkZGluZzo4cHg7fQogIC50YWJsZS1zY3JvbGx7b3ZlcmZsb3c6dmlzaWJsZTt9CiAgdGhlYWR7ZGlzcGxheTp0YWJsZS1oZWFkZXItZ3JvdXA7fQogIHRye2JyZWFrLWluc2lkZTphdm9pZDt9CiAgaDIsaDN7YnJlYWstYWZ0ZXI6YXZvaWQ7fQogIC5jYXJkLC5jb21wbGV0aW9uLC5yZXZpZXd7YnJlYWstaW5zaWRlOmF2b2lkO30KfQo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5Pgo8YSBjbGFzcz0ic2tpcCIgaHJlZj0iI21haW4iPlNraXAgdG8gY2VydGlmaWNhdGUgcmVxdWlyZW1lbnRzPC9hPgo8bWFpbiBpZD0ibWFpbiI+CiAgPGRpdiBjbGFzcz0iZXllYnJvdyI+CiAgICA8c3Bhbj5Vbml2ZXJzaXR5IG9mIEZsb3JpZGEgwrcgVXJiYW4gQW5hbHl0aWNzPC9zcGFuPgogICAgPHNwYW4+R3JhZHVhdGUgQ2VydGlmaWNhdGU8L3NwYW4+CiAgPC9kaXY+CgogIDxoZWFkZXI+CiAgICA8aDE+R3JhZHVhdGUgQ2VydGlmaWNhdGUgaW4gVXJiYW4gQW5hbHl0aWNzPC9oMT4KICAgIDxwIGNsYXNzPSJsZWFkIj5UaGUgR3JhZHVhdGUgQ2VydGlmaWNhdGUgaW4gVXJiYW4gQW5hbHl0aWNzIHJlcXVpcmVzIHRoZSBjb21wbGV0aW9uIG9mIDxzdHJvbmc+MTUgY3JlZGl0czwvc3Ryb25nPi4gU3R1ZGVudHMgZm9sbG93IG9uZSBvZiB0d28gY3VycmljdWx1bSBvcHRpb25zIGJhc2VkIG9uIHRoZWlyIHByaW9yIGFjYWRlbWljIGJhY2tncm91bmQuPC9wPgogIDwvaGVhZGVyPgoKICA8bmF2IGNsYXNzPSJqdW1wIiBhcmlhLWxhYmVsPSJDZXJ0aWZpY2F0ZSBjdXJyaWN1bHVtIHNlY3Rpb25zIj4KICAgIDxhIGhyZWY9IiNvdmVydmlldyI+UmVxdWlyZW1lbnRzIG92ZXJ2aWV3PC9hPgogICAgPGEgaHJlZj0iI29wdGlvbi1hIj5PcHRpb24gQTwvYT4KICAgIDxhIGhyZWY9IiNvcHRpb24tYiI+T3B0aW9uIEI8L2E+CiAgICA8YSBocmVmPSIjdGltZWZyYW1lIj5Db21wbGV0aW9uIHRpbWVmcmFtZTwvYT4KICA8L25hdj4KCiAgPGRpdiBjbGFzcz0ib3B0aW9uLW5vdGUiIGFyaWEtbGFiZWw9Ik9wdGlvbiBlbGlnaWJpbGl0eSI+CiAgICA8cD48c3Ryb25nPk9wdGlvbiBBPC9zdHJvbmc+IGlzIGZvciBzdHVkZW50cyB3aG8gaGF2ZSBhIGJhY2tncm91bmQgaW4gVXJiYW4gYW5kIFJlZ2lvbmFsIFBsYW5uaW5nIGFuZCByZWxhdGVkIHByb2dyYW1zLjwvcD4KICAgIDxwPjxzdHJvbmc+T3B0aW9uIEI8L3N0cm9uZz4gaXMgZm9yIHN0dWRlbnRzIHdpdGggYSBiYWNrZ3JvdW5kIGluIGNvbXB1dGVyIGFuZCBpbmZvcm1hdGlvbiBzY2llbmNlLCBlbGVjdHJvbmljIGFuZCBjb21wdXRlciBlbmdpbmVlcmluZywgb3IgcmVsYXRlZCBmaWVsZHMuPC9wPgogIDwvZGl2PgoKICA8c2VjdGlvbiBpZD0ib3ZlcnZpZXciPgogICAgPGgyPlByb2dyYW0gUmVxdWlyZW1lbnRzIGF0IGEgR2xhbmNlPC9oMj4KICAgIDxwIGNsYXNzPSJtb2JpbGUtaGludCI+U3dpcGUgaG9yaXpvbnRhbGx5IHRvIHZpZXcgYWxsIHRhYmxlIGNvbHVtbnMuPC9wPgogICAgPGRpdiBjbGFzcz0idGFibGUtc2Nyb2xsIiB0YWJpbmRleD0iMCIgcm9sZT0icmVnaW9uIiBhcmlhLWxhYmVsPSJDZXJ0aWZpY2F0ZSBwcm9ncmFtIHJlcXVpcmVtZW50cyBvdmVydmlldyI+CiAgICAgIDx0YWJsZSBjbGFzcz0ib3ZlcnZpZXciPgogICAgICAgIDx0aGVhZD4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPk9wdGlvbjwvdGg+CiAgICAgICAgICAgIDx0aCBzY29wZT0iY29sIj5Ub3RhbCBDcmVkaXRzPC90aD4KICAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPlJlcXVpcmVtZW50IFN0cnVjdHVyZTwvdGg+CiAgICAgICAgICA8L3RyPgogICAgICAgIDwvdGhlYWQ+CiAgICAgICAgPHRib2R5PgogICAgICAgICAgPHRyPgogICAgICAgICAgICA8dGggc2NvcGU9InJvdyI+T3B0aW9uIEE8L3RoPgogICAgICAgICAgICA8dGQ+MTU8L3RkPgogICAgICAgICAgICA8dGQ+OSBjcmVkaXRzIG9mIHJlcXVpcmVkIGNvcmUgY291cnNlcyArIDMgY3JlZGl0cyBvZiBVcmJhbiBhbmQgUmVnaW9uYWwgUGxhbm5pbmcgVGhlb3J5IGFuZCBNZXRob2RzICsgMyBjcmVkaXRzIG9mIERhdGEgYW5kIENvbXB1dGVyIFNjaWVuY2UgY291cnNlcy48L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRoIHNjb3BlPSJyb3ciPk9wdGlvbiBCPC90aD4KICAgICAgICAgICAgPHRkPjE1PC90ZD4KICAgICAgICAgICAgPHRkPjYgY3JlZGl0cyBvZiByZXF1aXJlZCBjb3JlIGNvdXJzZXMgKyA5IGNyZWRpdHMgb2YgVXJiYW4gYW5kIFJlZ2lvbmFsIFBsYW5uaW5nIFRoZW9yeSBhbmQgTWV0aG9kcy48L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICA8L3Rib2R5PgogICAgICA8L3RhYmxlPgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0icmVxdWlyZW1lbnQtc3VtbWFyeSIgYXJpYS1sYWJlbD0iT3B0aW9uIHN1bW1hcmllcyI+CiAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgIDxoMz5PcHRpb24gQTwvaDM+CiAgICAgICAgPHA+Rm9yIHN0dWRlbnRzIHdpdGggYSBiYWNrZ3JvdW5kIGluIFVyYmFuIGFuZCBSZWdpb25hbCBQbGFubmluZyBhbmQgcmVsYXRlZCBwcm9ncmFtcy48L3A+CiAgICAgICAgPHAgY2xhc3M9ImNyZWRpdC1saW5lIj4xNSBjcmVkaXRzIHRvdGFsPC9wPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iY2FyZCI+CiAgICAgICAgPGgzPk9wdGlvbiBCPC9oMz4KICAgICAgICA8cD5Gb3Igc3R1ZGVudHMgd2l0aCBhIGJhY2tncm91bmQgaW4gY29tcHV0ZXIgYW5kIGluZm9ybWF0aW9uIHNjaWVuY2UsIGVsZWN0cm9uaWMgYW5kIGNvbXB1dGVyIGVuZ2luZWVyaW5nLCBvciByZWxhdGVkIGZpZWxkcy48L3A+CiAgICAgICAgPHAgY2xhc3M9ImNyZWRpdC1saW5lIj4xNSBjcmVkaXRzIHRvdGFsPC9wPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KCiAgPHNlY3Rpb24gaWQ9Im9wdGlvbi1hIj4KICAgIDxoMj5PcHRpb24gQSBSZXF1aXJlbWVudHM8L2gyPgogICAgPHA+T3B0aW9uIEEgaXMgZGVzaWduZWQgZm9yIHN0dWRlbnRzIHdpdGggYSBiYWNrZ3JvdW5kIGluIFVyYmFuIGFuZCBSZWdpb25hbCBQbGFubmluZyBhbmQgcmVsYXRlZCBwcm9ncmFtcy48L3A+CgogICAgPGgzPlJlcXVpcmVkIENvcmUgQ291cnNlcyAtIDkgQ3JlZGl0czwvaDM+CiAgICA8cCBjbGFzcz0ibW9iaWxlLWhpbnQiPlN3aXBlIGhvcml6b250YWxseSB0byB2aWV3IGFsbCB0YWJsZSBjb2x1bW5zLjwvcD4KICAgIDxkaXYgY2xhc3M9InRhYmxlLXNjcm9sbCIgdGFiaW5kZXg9IjAiIHJvbGU9InJlZ2lvbiIgYXJpYS1sYWJlbD0iT3B0aW9uIEEgcmVxdWlyZWQgY29yZSBjb3Vyc2VzIj4KICAgICAgPHRhYmxlIGNsYXNzPSJjb3Vyc2VzIj4KICAgICAgICA8dGhlYWQ+CiAgICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0aCBzY29wZT0iY29sIj5Db3Vyc2U8L3RoPgogICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+VGl0bGU8L3RoPgogICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+UmVxdWlyZW1lbnQ8L3RoPgogICAgICAgICAgPC90cj4KICAgICAgICA8L3RoZWFkPgogICAgICAgIDx0Ym9keT4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRoIHNjb3BlPSJyb3ciPlVSUCA2Mjk1PC90aD4KICAgICAgICAgICAgPHRkPlVyYmFuIERhdGEgU3RydWN0dXJlcyBCYXNpY3MgPHNwYW4gYXJpYS1sYWJlbD0ibmV3IGNvdXJzZSI+KG5ldyBjb3Vyc2UpPC9zcGFuPjwvdGQ+CiAgICAgICAgICAgIDx0ZD4zIGNyZWRpdHMsIHJlcXVpcmVkPC90ZD4KICAgICAgICAgIDwvdHI+CiAgICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0aCBzY29wZT0icm93Ij5VUlAgNjIyMzwvdGg+CiAgICAgICAgICAgIDx0ZD5JbnRyb2R1Y3Rpb24gdG8gVXJiYW4gQW5hbHl0aWNzPGJyPjxzcGFuIHN0eWxlPSJjb2xvcjojNGM0YzRjOyI+QWx0ZXJuYXRpdmU6IFVSUCA2OTMxIOKAkyBBcnRpZmljaWFsIEludGVsbGlnZW5jZSBpbiB0aGUgQnVpbHQgRW52aXJvbm1lbnQ8L3NwYW4+PC90ZD4KICAgICAgICAgICAgPHRkPjMgY3JlZGl0cywgcmVxdWlyZWQ8L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRoIHNjb3BlPSJyb3ciPlVSUCA2MjI0PC90aD4KICAgICAgICAgICAgPHRkPkludGVybWVkaWF0ZSBVcmJhbiBBbmFseXRpY3M8L3RkPgogICAgICAgICAgICA8dGQ+MyBjcmVkaXRzLCByZXF1aXJlZDwvdGQ+CiAgICAgICAgICA8L3RyPgogICAgICAgIDwvdGJvZHk+CiAgICAgIDwvdGFibGU+CiAgICA8L2Rpdj4KCiAgICA8aDM+VXJiYW4gYW5kIFJlZ2lvbmFsIFBsYW5uaW5nIFRoZW9yeSBhbmQgTWV0aG9kcyAtIDMgQ3JlZGl0cyBSZXF1aXJlZDwvaDM+CiAgICA8cD5TZWxlY3QgY291cnNlcyBmcm9tIHRoZSBmb2xsb3dpbmcgbGlzdCB0byBzYXRpc2Z5IHRoZSAzLWNyZWRpdCByZXF1aXJlbWVudC48L3A+CiAgICA8cCBjbGFzcz0ibW9iaWxlLWhpbnQiPlN3aXBlIGhvcml6b250YWxseSB0byB2aWV3IGFsbCB0YWJsZSBjb2x1bW5zLjwvcD4KICAgIDxkaXYgY2xhc3M9InRhYmxlLXNjcm9sbCIgdGFiaW5kZXg9IjAiIHJvbGU9InJlZ2lvbiIgYXJpYS1sYWJlbD0iT3B0aW9uIEEgdXJiYW4gYW5kIHJlZ2lvbmFsIHBsYW5uaW5nIHRoZW9yeSBhbmQgbWV0aG9kcyBjb3Vyc2VzIj4KICAgICAgPHRhYmxlIGNsYXNzPSJzaW1wbGVjb3Vyc2VzIj4KICAgICAgICA8dGhlYWQ+CiAgICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0aCBzY29wZT0iY29sIj5Db3Vyc2U8L3RoPgogICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+VGl0bGU8L3RoPgogICAgICAgICAgPC90cj4KICAgICAgICA8L3RoZWFkPgogICAgICAgIDx0Ym9keT4KICAgICAgICAgIDx0cj48dGggc2NvcGU9InJvdyI+VVJQIDYyNzA8L3RoPjx0ZD5JbnRyb2R1Y3Rpb24gdG8gUGxhbm5pbmcgSW5mb3JtYXRpb24gU3lzdGVtczwvdGQ+PC90cj4KICAgICAgICAgIDx0cj48dGggc2NvcGU9InJvdyI+VVJQIDYyNzE8L3RoPjx0ZD5BdXRvbWF0aW9uIGZvciBHZW9zcGF0aWFsIE1vZGVsaW5nIGFuZCBBbmFseXNpczwvdGQ+PC90cj4KPHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjI3MjwvdGg+PHRkPlVyYmFuIFNwYXRpYWwgQW5hbHlzaXM8L3RkPjwvdHI+CiAgICAgICAgICA8dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2Mjc1PC90aD48dGQ+SW50ZXJtZWRpYXRlIFBsYW5uaW5nIEluZm9ybWF0aW9uIFN5c3RlbXM8L3RkPjwvdHI+CiAgICAgICAgICA8dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2ODIxPC90aD48dGQ+VHJhbnNwb3J0YXRpb24gYW5kIExhbmQgVXNlIE1vZGVsaW5nPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5HRU8gNjE2NjwvdGg+PHRkPkFkdmFuY2VkIFF1YW50aXRhdGl2ZSBNZXRob2RzIGZvciBTcGF0aWFsIEFuYWx5c2lzPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjkzMTwvdGg+PHRkPlRvcGljYWwgU2VtaW5hcnM8L3RkPjwvdHI+CiAgICAgICAgPC90Ym9keT4KICAgICAgPC90YWJsZT4KICAgIDwvZGl2PgoKICAgIDxoMz5EYXRhIGFuZCBDb21wdXRlciBTY2llbmNlIENvdXJzZXMgLSAzIENyZWRpdHMgUmVxdWlyZWQ8L2gzPgogICAgPHA+U2VsZWN0IGNvdXJzZXMgZnJvbSB0aGUgZm9sbG93aW5nIGxpc3QgdG8gc2F0aXNmeSB0aGUgMy1jcmVkaXQgcmVxdWlyZW1lbnQuPC9wPgogICAgPHAgY2xhc3M9Im1vYmlsZS1oaW50Ij5Td2lwZSBob3Jpem9udGFsbHkgdG8gdmlldyBhbGwgdGFibGUgY29sdW1ucy48L3A+CiAgICA8ZGl2IGNsYXNzPSJ0YWJsZS1zY3JvbGwiIHRhYmluZGV4PSIwIiByb2xlPSJyZWdpb24iIGFyaWEtbGFiZWw9Ik9wdGlvbiBBIGRhdGEgYW5kIGNvbXB1dGVyIHNjaWVuY2UgY291cnNlcyI+CiAgICAgIDx0YWJsZSBjbGFzcz0ic2ltcGxlY291cnNlcyI+CiAgICAgICAgPHRoZWFkPgogICAgICAgICAgPHRyPgogICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+Q291cnNlPC90aD4KICAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPlRpdGxlPC90aD4KICAgICAgICAgIDwvdHI+CiAgICAgICAgPC90aGVhZD4KICAgICAgICA8dGJvZHk+CiAgICAgICAgICA8dHI+PHRoIHNjb3BlPSJyb3ciPkFSQyA2OTIyPC90aD48dGQ+TWFjaGluZSBMZWFybmluZyBmb3IgQXJjaGl0ZWN0czwvdGQ+PC90cj4KICAgICAgICAgIDx0cj48dGggc2NvcGU9InJvdyI+Q09UIDU2MTU8L3RoPjx0ZD5NYXRoZW1hdGljcyBmb3IgSW50ZWxsaWdlbnQgU3lzdGVtczwvdGQ+PC90cj4KICAgICAgICAgIDx0cj48dGggc2NvcGU9InJvdyI+Q0FQIDY2MTA8L3RoPjx0ZD5NYWNoaW5lIExlYXJuaW5nPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5DQVAgNjYxNTwvdGg+PHRkPk5ldXJhbCBOZXR3b3JrPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5FRUUgNjUxMjwvdGg+PHRkPkltYWdlIFByb2Nlc3NpbmcgYW5kIENvbXB1dGVyIFZpc2lvbjwvdGQ+PC90cj4KICAgICAgICAgIDx0cj48dGggc2NvcGU9InJvdyI+RUVMIDU4NDA8L3RoPjx0ZD5GdW5kYW1lbnRhbHMgb2YgTWFjaGluZSBMZWFybmluZzwvdGQ+PC90cj4KICAgICAgICAgIDx0cj48dGggc2NvcGU9InJvdyI+RUVMIDY4MTQ8L3RoPjx0ZD5OZXVyYWwgTmV0d29ya3MgYW5kIERlZXAgTGVhcm5pbmc8L3RkPjwvdHI+CiAgICAgICAgICA8dHI+PHRoIHNjb3BlPSJyb3ciPkVFTCA2ODI1PC90aD48dGQ+UGF0dGVybiBSZWNvZ25pdGlvbiBhbmQgSW50ZWxsaWdlbnQgU3lzdGVtczwvdGQ+PC90cj4KICAgICAgICA8L3Rib2R5PgogICAgICA8L3RhYmxlPgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPgoKICA8c2VjdGlvbiBpZD0ib3B0aW9uLWIiPgogICAgPGgyPk9wdGlvbiBCIFJlcXVpcmVtZW50czwvaDI+CiAgICA8cD5PcHRpb24gQiBpcyBkZXNpZ25lZCBmb3Igc3R1ZGVudHMgd2l0aCBhIGJhY2tncm91bmQgaW4gY29tcHV0ZXIgYW5kIGluZm9ybWF0aW9uIHNjaWVuY2UsIGVsZWN0cm9uaWMgYW5kIGNvbXB1dGVyIGVuZ2luZWVyaW5nLCBvciByZWxhdGVkIGZpZWxkcy48L3A+CgogICAgPGgzPlJlcXVpcmVkIENvcmUgQ291cnNlcyAtIDYgQ3JlZGl0czwvaDM+CiAgICA8cCBjbGFzcz0ibW9iaWxlLWhpbnQiPlN3aXBlIGhvcml6b250YWxseSB0byB2aWV3IGFsbCB0YWJsZSBjb2x1bW5zLjwvcD4KICAgIDxkaXYgY2xhc3M9InRhYmxlLXNjcm9sbCIgdGFiaW5kZXg9IjAiIHJvbGU9InJlZ2lvbiIgYXJpYS1sYWJlbD0iT3B0aW9uIEIgcmVxdWlyZWQgY29yZSBjb3Vyc2VzIj4KICAgICAgPHRhYmxlIGNsYXNzPSJjb3Vyc2VzIj4KICAgICAgICA8dGhlYWQ+CiAgICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0aCBzY29wZT0iY29sIj5Db3Vyc2U8L3RoPgogICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+VGl0bGU8L3RoPgogICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+UmVxdWlyZW1lbnQ8L3RoPgogICAgICAgICAgPC90cj4KICAgICAgICA8L3RoZWFkPgogICAgICAgIDx0Ym9keT4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRoIHNjb3BlPSJyb3ciPlVSUCA2MjI0PC90aD4KICAgICAgICAgICAgPHRkPkludGVybWVkaWF0ZSBVcmJhbiBBbmFseXRpY3M8L3RkPgogICAgICAgICAgICA8dGQ+MyBjcmVkaXRzLCByZXF1aXJlZDwvdGQ+CiAgICAgICAgICA8L3RyPgogICAgICAgICAgPHRyPgogICAgICAgICAgICA8dGggc2NvcGU9InJvdyI+VVJQIDYwMDc8L3RoPgogICAgICAgICAgICA8dGQ+U3VydmV5IGluIFVyYmFuIGFuZCBSZWdpb25hbCBQbGFubmluZzwvdGQ+CiAgICAgICAgICAgIDx0ZD4zIGNyZWRpdHMsIHJlcXVpcmVkPC90ZD4KICAgICAgICAgIDwvdHI+CiAgICAgICAgPC90Ym9keT4KICAgICAgPC90YWJsZT4KICAgIDwvZGl2PgoKICAgIDxoMz5VcmJhbiBhbmQgUmVnaW9uYWwgUGxhbm5pbmcgVGhlb3J5IGFuZCBNZXRob2RzIC0gOSBDcmVkaXRzIFJlcXVpcmVkPC9oMz4KICAgIDxwPlNlbGVjdCBjb3Vyc2VzIGZyb20gdGhlIGZvbGxvd2luZyBsaXN0IHRvIHNhdGlzZnkgdGhlIDktY3JlZGl0IHJlcXVpcmVtZW50LjwvcD4KICAgIDxwIGNsYXNzPSJtb2JpbGUtaGludCI+U3dpcGUgaG9yaXpvbnRhbGx5IHRvIHZpZXcgYWxsIHRhYmxlIGNvbHVtbnMuPC9wPgogICAgPGRpdiBjbGFzcz0idGFibGUtc2Nyb2xsIiB0YWJpbmRleD0iMCIgcm9sZT0icmVnaW9uIiBhcmlhLWxhYmVsPSJPcHRpb24gQiB1cmJhbiBhbmQgcmVnaW9uYWwgcGxhbm5pbmcgdGhlb3J5IGFuZCBtZXRob2RzIGNvdXJzZXMiPgogICAgICA8dGFibGUgY2xhc3M9InNpbXBsZWNvdXJzZXMiPgogICAgICAgIDx0aGVhZD4KICAgICAgICAgIDx0cj4KICAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPkNvdXJzZTwvdGg+CiAgICAgICAgICAgIDx0aCBzY29wZT0iY29sIj5UaXRsZTwvdGg+CiAgICAgICAgICA8L3RyPgogICAgICAgIDwvdGhlYWQ+CiAgICAgICAgPHRib2R5PgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjI3MDwvdGg+PHRkPkludHJvZHVjdGlvbiB0byBQbGFubmluZyBJbmZvcm1hdGlvbiBTeXN0ZW1zPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjI3MTwvdGg+PHRkPkF1dG9tYXRpb24gZm9yIEdlb3NwYXRpYWwgTW9kZWxpbmcgYW5kIEFuYWx5c2lzPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjI3MjwvdGg+PHRkPlVyYmFuIFNwYXRpYWwgQW5hbHlzaXM8L3RkPjwvdHI+CiAgICAgICAgICA8dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2Mjc1PC90aD48dGQ+SW50ZXJtZWRpYXRlIFBsYW5uaW5nIEluZm9ybWF0aW9uIFN5c3RlbXM8L3RkPjwvdHI+CiAgICAgICAgICA8dHI+PHRoIHNjb3BlPSJyb3ciPlVSUCA2ODIxPC90aD48dGQ+VHJhbnNwb3J0YXRpb24gYW5kIExhbmQgVXNlIE1vZGVsaW5nPC90ZD48L3RyPgogICAgICAgICAgPHRyPjx0aCBzY29wZT0icm93Ij5VUlAgNjkzMTwvdGg+PHRkPlRvcGljYWwgU2VtaW5hcnM8L3RkPjwvdHI+CiAgICAgICAgPC90Ym9keT4KICAgICAgPC90YWJsZT4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KCiAgPHNlY3Rpb24gaWQ9InRpbWVmcmFtZSIgY2xhc3M9ImNvbXBsZXRpb24iIGFyaWEtbGFiZWxsZWRieT0idGltZWZyYW1lLWhlYWRpbmciPgogICAgPGgyIGlkPSJ0aW1lZnJhbWUtaGVhZGluZyI+Q29tcGxldGlvbiBUaW1lZnJhbWU8L2gyPgogICAgPHA+VGhlIGFsbG93ZWQgdGltZWZyYW1lIGZvciBjb21wbGV0aW9uIG9mIHRoaXMgY2VydGlmaWNhdGUgaXMgPHN0cm9uZz4zIHllYXJzPC9zdHJvbmc+IGZyb20gaW5pdGlhbCBlbnJvbGxtZW50IGluIHRoZSBncmFkdWF0ZSBjZXJ0aWZpY2F0ZSBwcm9ncmFtLjwvcD4KICA8L3NlY3Rpb24+CjwvbWFpbj4KPC9ib2R5Pgo8L2h0bWw+Cg=="}}</script><script id="section-navigation">/* Same-document navigation. Never navigate the preview's outer URL. */
+(function () {
+  'use strict';
+  const nav = document.querySelector('.inpage');
+  const navLinks = Array.from(document.querySelectorAll('.inpage [data-section-target]'));
+  const sections = navLinks.map(a => document.getElementById(a.dataset.sectionTarget)).filter(Boolean);
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let ticking = false;
+  let activeId = '';
+
+  function updateOffset() {
+    const height = nav ? Math.ceil(nav.getBoundingClientRect().height) : 0;
+    document.documentElement.style.setProperty('--section-offset', (height + 16) + 'px');
+  }
+
+  function markActive(id) {
+    if (activeId === id) return;
+    activeId = id;
+    navLinks.forEach(function (link) {
+      if (link.dataset.sectionTarget === id) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActive() {
+    ticking = false;
+    if (document.body.classList.contains('curriculum-open')) return;
+    const threshold = (nav ? nav.getBoundingClientRect().height : 0) + 100;
+    let current = '';
+    sections.forEach(function (section) {
+      if (section.getBoundingClientRect().top <= threshold) current = section.id;
+    });
+    const bottom = Math.ceil(window.scrollY + window.innerHeight);
+    if (bottom >= document.documentElement.scrollHeight - 3 && sections.length) {
+      current = sections[sections.length - 1].id;
+    }
+    markActive(current);
+  }
+
+  function jumpTo(id, options) {
+    const target = document.getElementById(id);
+    if (!target) return false;
+    const opts = options || {};
+    updateOffset();
+    if (opts.focus !== false) {
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      target.focus({preventScroll: true});
+    }
+    target.scrollIntoView({
+      block: 'start', inline: 'nearest',
+      behavior: opts.instant || reducedMotion.matches ? 'instant' : 'smooth'
+    });
+    markActive(id);
+    if (opts.record !== false) {
+      try {
+        // History is optional. Opaque-origin previews may forbid this write.
+        if (window.location.hash !== '#' + id) {
+          const localURL = window.location.href.split('#')[0] + '#' + id;
+          window.history.pushState({ufSection: id}, '', localURL);
+        }
+      } catch (_) {
+        // Do not fall back to location.href: that can leave a sandboxed preview.
+      }
+    }
+    return true;
+  }
+
+  window.addEventListener('click', function (event) {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const element = event.target instanceof Element ? event.target : event.target.parentElement;
+    const link = element ? element.closest('[data-section-target]') : null;
+    if (!link) return;
+    const id = link.dataset.sectionTarget;
+    if (!document.getElementById(id)) return;
+    // Capture before preview link interceptors. The immutable data attribute
+    // still identifies the right section if a host rewrites href or adds <base>.
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    jumpTo(id);
+  }, true);
+
+  function followHistory() {
+    if (document.body.classList.contains('curriculum-open')) return;
+    let id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (_) { return; }
+    if (id && !id.startsWith('curriculum-view-')) jumpTo(id, {record: false, focus: false, instant: true});
+  }
+  window.addEventListener('popstate', followHistory);
+  window.addEventListener('hashchange', followHistory);
+  window.addEventListener('resize', function () { updateOffset(); updateActive(); });
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(updateActive); }
+  }, {passive: true});
+  if (nav && 'ResizeObserver' in window) new ResizeObserver(updateOffset).observe(nav);
+  updateOffset();
+  updateActive();
+  window.requestAnimationFrame(followHistory);
+})();
+</script><script>
+/* Preserve the existing carousel behavior. */
+function scrollFaculty(id, direction) {
+  const track = document.getElementById(id);
+  if (!track) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const amount = Math.min(track.clientWidth * 0.82, 680);
+  track.scrollBy({ left: direction * amount, behavior: reducedMotion ? 'auto' : 'smooth' });
+}
+function facultyPhotoFallback(img, initials) {
+  img.style.display = 'none';
+  const fallback = img.nextElementSibling;
+  if (fallback) {
+    fallback.textContent = initials;
+    fallback.style.display = 'grid';
+  }
+}
+
+/*
+ * The source filenames remain real hrefs. Hosted copies open the corresponding
+ * file directly; isolated previews and local single-file copies use exact
+ * embedded source bytes, without a network dependency or a missing-file error.
+ */
+(function () {
+  'use strict';
+  const rawSources = document.getElementById('curriculum-source-files');
+  const viewer = document.getElementById('curriculum-viewer');
+  let frame = document.getElementById('curriculum-frame');
+  const back = document.getElementById('curriculum-back');
+  const save = document.getElementById('curriculum-download');
+  const heading = document.getElementById('curriculum-viewer-heading');
+  const sourceName = document.getElementById('curriculum-source-name');
+  const status = document.getElementById('curriculum-status');
+  if (!rawSources || !viewer || !frame || !back || !save) return;
+
+  let sources;
+  try {
+    sources = JSON.parse(rawSources.textContent);
+  } catch (error) {
+    console.error('Unable to read the embedded curriculum sources.', error);
+    return; // The ordinary hrefs are still usable with the packaged files.
+  }
+  const decoded = new Map();
+  const availability = new Map();
+  const originalTitle = document.title;
+  let currentKey = null;
+  let returnLink = null;
+  let returnScroll = 0;
+  let downloadURL = null;
+  let ownedHistoryEntry = false;
+  let previousHash = '';
+  let navigating = false;
+
+  function decodeSource(key) {
+    if (!Object.prototype.hasOwnProperty.call(sources, key)) return null;
+    if (!decoded.has(key)) {
+      const bytes = Uint8Array.from(atob(sources[key].content), char => char.charCodeAt(0));
+      decoded.set(key, new TextDecoder('utf-8').decode(bytes));
+    }
+    return decoded.get(key);
+  }
+
+  function routeKey() {
+    const match = /^#curriculum-view-(msua|certificate)$/.exec(window.location.hash);
+    return match ? match[1] : null;
+  }
+
+  function showSource(key, link) {
+    const text = decodeSource(key);
+    if (text === null) return;
+    if (!viewer.open) {
+      returnScroll = window.scrollY;
+      returnLink = link || (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    }
+    if (currentKey !== key) {
+      currentKey = key;
+      heading.textContent = sources[key].title;
+      sourceName.textContent = sources[key].filename;
+      const nextFrame = frame.cloneNode(false);
+      nextFrame.title = sources[key].title;
+      // Only the viewing context gets a base tag. The original source file is
+      // kept byte-for-byte in the payload and in the downloadable website ZIP.
+      nextFrame.srcdoc = prepareSourceDocument(text);
+      frame.replaceWith(nextFrame);
+      frame = nextFrame;
+      if (downloadURL) URL.revokeObjectURL(downloadURL);
+      const originalBytes = Uint8Array.from(atob(sources[key].content), char => char.charCodeAt(0));
+      downloadURL = URL.createObjectURL(new Blob([originalBytes], { type: 'text/html;charset=utf-8' }));
+      save.href = downloadURL;
+      save.download = sources[key].filename;
+    }
+    document.title = sources[key].title + ' | UF Urban Analytics';
+    document.body.classList.add('curriculum-open');
+    if (!viewer.open) viewer.showModal();
+    back.focus({ preventScroll: true });
+    if (status) status.textContent = sources[key].title + ' opened.';
+  }
+
+  function hideSource() {
+    if (viewer.open) viewer.close();
+    currentKey = null;
+    document.body.classList.remove('curriculum-open');
+    document.title = originalTitle;
+    if (returnLink && returnLink.isConnected) returnLink.focus({ preventScroll: true });
+    window.scrollTo({ top: returnScroll, behavior: 'instant' });
+    if (status) status.textContent = 'Returned to the Urban Analytics program page.';
+  }
+
+  function openEmbedded(key, link) {
+    if (routeKey() !== key) {
+      previousHash = window.location.hash;
+      try {
+        history.pushState({ ufCurriculumView: key }, '', window.location.href.split('#')[0] + '#curriculum-view-' + key);
+        ownedHistoryEntry = true;
+      } catch (error) {
+        // Some sandboxed previews restrict History API writes. Viewing still works.
+        ownedHistoryEntry = false;
+      }
+    }
+    showSource(key, link);
+  }
+
+  function closeViewer() {
+    hideSource();
+    if (routeKey()) {
+      if (ownedHistoryEntry) {
+        ownedHistoryEntry = false;
+        history.back();
+      } else {
+        try {
+          history.replaceState(null, '', window.location.href.split('#')[0] + (previousHash || '#curriculum'));
+        } catch (error) {
+          // Closing the viewer itself does not rely on History API access.
+        }
+      }
+    }
+  }
+
+  function normalized(text) {
+    return text.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').trim();
+  }
+
+  async function matchingHostedFile(key) {
+    if (document.documentElement.dataset.delivery === 'standalone') return false;
+    if (availability.has(key)) return availability.get(key);
+    const knownPreview = /(^|\.)(oaiusercontent\.com|openaiusercontent\.com|chatgpt\.com)$/.test(window.location.hostname);
+    if (!/^https?:$/.test(window.location.protocol) || knownPreview) return false;
+    const target = new URL(sources[key].filename, window.location.href);
+    if (target.origin !== window.location.origin) return false;
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 1200);
+    let matches = false;
+    try {
+      const response = await fetch(target.href, { signal: controller.signal, credentials: 'same-origin' });
+      // Do not navigate to a 404 page, login page, or a generic host preview.
+      matches = response.ok && normalized(await response.text()) === normalized(decodeSource(key));
+    } catch (error) {
+      matches = false;
+    } finally {
+      window.clearTimeout(timeout);
+    }
+    availability.set(key, matches);
+    return matches;
+  }
+
+  window.addEventListener('click', async event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const element = event.target instanceof Element ? event.target : event.target.parentElement;
+      const link = element ? element.closest('a[data-curriculum]') : null;
+      if (!link) return;
+      const key = link.dataset.curriculum;
+      if (!Object.prototype.hasOwnProperty.call(sources, key)) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (navigating) return;
+      navigating = true;
+      link.setAttribute('aria-busy', 'true');
+      if (status) status.textContent = 'Opening ' + sources[key].title + '.';
+      try {
+        if (await matchingHostedFile(key)) {
+          window.location.assign(new URL(sources[key].filename, window.location.href).href);
+        } else {
+          openEmbedded(key, link);
+        }
+      } catch (error) {
+        openEmbedded(key, link);
+      } finally {
+        navigating = false;
+        link.removeAttribute('aria-busy');
+      }
+  }, true);
+
+  function prepareSourceDocument(text) {
+    const binder = function () {
+      window.addEventListener('click', function (event) {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        const el = event.target instanceof Element ? event.target : event.target.parentElement;
+        const anchor = el ? el.closest('a[href]') : null;
+        if (!anchor) return;
+        const href = anchor.getAttribute('href') || '';
+        if (!href.startsWith('#')) return;
+        let id;
+        try { id = decodeURIComponent(href.slice(1)); } catch (_) { return; }
+        const target = document.getElementById(id);
+        if (!target) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+        target.focus({preventScroll: true});
+        target.scrollIntoView({block: 'start', behavior: 'instant'});
+      }, true);
+    };
+    const addition = '<base href="about:srcdoc" target="_self"><script>(' + binder.toString() + ')();<' + '/script>';
+    return text.replace(/(<head\b[^>]*>)/i, '$1' + addition);
+  }
+
+  back.addEventListener('click', closeViewer);
+  viewer.addEventListener('cancel', event => {
+    event.preventDefault();
+    closeViewer();
+  });
+  function syncRoute() {
+    const key = routeKey();
+    if (key) {
+      showSource(key, null);
+    } else if (viewer.open) {
+      hideSource();
+      ownedHistoryEntry = false;
+    }
+  }
+  window.addEventListener('popstate', syncRoute);
+  window.addEventListener('hashchange', syncRoute);
+  if (routeKey()) showSource(routeKey(), null);
+})();
+
+</script></body>
+</html>
