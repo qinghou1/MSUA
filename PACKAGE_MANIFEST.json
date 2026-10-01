@@ -1,0 +1,97 @@
+{
+  "package_version": "v5",
+  "source": "20260930_UF_Urban_Analytics_Self_Contained_v3.html",
+  "source_sha256": "7fc8a78b190d72a7dc36914969ecd1e043f69b59ceb01351af3a2c0af978ee76",
+  "entry_point": "index.html",
+  "local_image_count": 7,
+  "local_images": [
+    {
+      "path": "assets/projects/zhou-alternative-graphs.png",
+      "alt": "Four nesting structures for automobile, transit, bike, and walking choices and their corresponding alternative graphs.",
+      "media_type": "image/png",
+      "sha256": "acbdf8b89232b178e27609f703794847f3b3f503b8458620df44af774ec6d60a",
+      "bytes": 85227
+    },
+    {
+      "path": "assets/projects/song-dualcontrolnet.png",
+      "alt": "Environmental control maps, generated satellite images, and corresponding land use maps in five Orlando examples.",
+      "media_type": "image/png",
+      "sha256": "85977ee98196a86e56df074e731c4a8bead80864554a46d043d9fe1d52f9e97e",
+      "bytes": 771513
+    },
+    {
+      "path": "assets/projects/ciceri-urban-heat.png",
+      "alt": "Local spatial cluster map of land surface temperature in New York City, with a legend for high-high, low-low, and other cluster types.",
+      "media_type": "image/png",
+      "sha256": "645dc07001e68e8240c219ecfd90624d9cfb68be72f0776d2ec44c6706253d1f",
+      "bytes": 318808
+    },
+    {
+      "path": "assets/projects/chisholm-property-tax.png",
+      "alt": "Diagram comparing market value and assessed value over time, reproduced from the property taxation project.",
+      "media_type": "image/png",
+      "sha256": "8ecb4e609bb067139877aa39baf09642953c23a7bc3ab9a419dbea92833bbbe9",
+      "bytes": 226863
+    },
+    {
+      "path": "assets/projects/zhang-housing-values.png",
+      "alt": "Choropleth map showing the spatial distribution of median housing values across Florida census tracts.",
+      "media_type": "image/png",
+      "sha256": "d7b467d6987f73573cbb285afc12bef0e28d249e88fc889913ad9d248178fcbe",
+      "bytes": 346600
+    },
+    {
+      "path": "assets/faculty/zhaoxi-zhang.png",
+      "alt": "Zhaoxi Zhang",
+      "media_type": "image/png",
+      "sha256": "281daba67fbff8e64cb6444a72ae94b1f3eb48ea16f6a1ae15bbb28aa77da8c8",
+      "bytes": 760459
+    },
+    {
+      "path": "assets/faculty/vivian-wong.jpg",
+      "alt": "Vivian Wong",
+      "media_type": "image/jpeg",
+      "sha256": "9badc6b6d370726ef3c9af91f938ea019255816135bb9ae3c295c271bb9b8124",
+      "bytes": 185462
+    }
+  ],
+  "external_portraits": [
+    {
+      "name": "Zhong-Ren Peng",
+      "url": "https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2020/03/Peng_headshot-e1694750536260.jpg",
+      "fallback": "Existing initials fallback, unchanged from the approved v3"
+    },
+    {
+      "name": "Emre Tepe",
+      "url": "https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2023/09/Tepe-scaled-e1694749582497.jpg",
+      "fallback": "Existing initials fallback, unchanged from the approved v3"
+    },
+    {
+      "name": "Shenhao Wang",
+      "url": "https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2022/08/Shenhao-Wang-scaled.jpg",
+      "fallback": "Existing initials fallback, unchanged from the approved v3"
+    },
+    {
+      "name": "Yan Wang",
+      "url": "https://dcp.ufl.edu/urp/wp-content/uploads/sites/34/2025/05/wang-yan-300x300-2.jpg",
+      "fallback": "Existing initials fallback, unchanged from the approved v3"
+    }
+  ],
+  "curricula": {
+    "msua": {
+      "filename": "20260921_Curriculum_MSUA.html",
+      "sha256": "98ed74b7bc36dd0a63ced52cf4f9ecd962b245b0888aebd7c5fa1126907ffd4a"
+    },
+    "certificate": {
+      "filename": "20260921_Curriculum_Certificate.html",
+      "sha256": "4e303feea702c7a23d0b3f6d463f30caceca7b512b3817e17c618685f250492e"
+    }
+  },
+  "notes": [
+    "Visual design, student project order, abstracts, and approved text are preserved from self-contained v3.",
+    "CSS, JavaScript, and embedded images are externalized to relative local paths for hosting.",
+    "Curriculum HTML files are byte-identical to the approved embedded payloads.",
+    "The included self-contained HTML is an unchanged copy of the approved v3.",
+    "Four faculty portraits retain their approved UF-hosted URLs and initials fallback; their bytes are not bundled."
+  ]
+}

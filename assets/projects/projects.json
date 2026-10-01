@@ -1,0 +1,69 @@
+[
+  {
+    "order": 1,
+    "title": "Developing Alternative Graph Neural Networks to Generalize Nested Logit Models for Travel Mode Choice",
+    "author": "Yuqi Zhou",
+    "category": "MACHINE LEARNING & TRANSPORTATION",
+    "abstract_paragraphs": [
+      "Generalized extreme value models capture dependence among choice alternatives in discrete choice modeling, but require this dependence to be predefined, symmetric, and shared uniformly across individuals. Recent efforts to synergize discrete choice modeling with deep neural networks have improved predictive performance but still cannot explicitly represent alternative dependence within neural architectures. To address these gaps, we introduce the alternative graph - a graph in which nodes represent choice alternatives and edges encode their dependence -and propose Alternative Graph Neural Networks (Alt-GNNs), a family of GNN-based discrete choice models that embed alternative dependence within a unified framework. Theoretically, Alt-GNNs incorporate multinomial logit, nested logit, and deep neural network architecture with alternative-specific utility functions as special cases and enable innovative model designs, including Nested Alt-GNN, Complete Alt-GNN, and Attention Alt-GNN. Alt-GNNs are consistent with random utility maximization theory, enforce behavioral constraints through alternative graphs, and offer a novel graph-based interpretation of utility functions. Empirically, on two travel mode choice datasets from London and Chicago, Alt-GNNs significantly improve predictive performance over all benchmark models in mode choice modeling because of their flexible alternative graph design and vast hyperparameter space. Even the simplest Alt-GNN variable - Nested Alt-GNN - generalizes the nested logit model while preserving its unique two-layer substitution properties, enabling graph-based behavioral constraints over otherwise unconstrained behavioral patterns from deep neural networks. In addition, Alt-GNNs also enable graph-based, individualized, and asymmetric interpretation of alternative dependence, transcending pre-defined nesting structures dominant in GEV models. Overall, this study provides a unified graph neural network framework that synergizes classical GEV models with modern graph neural networks, advancing both predictive accuracy and behavioral interpretation in travel mode choice modeling."
+    ],
+    "image": "assets/projects/zhou-alternative-graphs.png",
+    "image_alt": "Four nesting structures for automobile, transit, bike, and walking choices and their corresponding alternative graphs.",
+    "caption": "Nesting structures and their corresponding alternative graphs. Yuqi Zhou"
+  },
+  {
+    "order": 2,
+    "title": "DualControlNet: A Multimodal Generative AI Framework for Jointly Synthesizing Land Use and Satellite Imagery",
+    "author": "Qingqi Song",
+    "category": "GENERATIVE AI & URBAN DESIGN",
+    "abstract_paragraphs": [
+      "Researchers have adopted a wide range of tools to design urban systems. However, past studies rarely investigated how to use generative AI to create spatially consistent multimodal representations, which is a fundamental characteristic of any geospatial system. Here I introduce DualControlNet, a novel diffusion framework that jointly synthesizes high-resolution remote sensing and land use images, addressing the overlooked need for multimodal spatial generation. By adding a geospatial loss, I designed DualControlNet and compared it to the baseline diffusion models, evaluating their visual realism, spatial consistency, and prompt consistency using two data sets from Orlando and Chicago. Empirically, I found that DualControlNet enhances spatial consistency, raising cosine similarity by 8.4% over the state-of-the-art benchmarks. It also produces visually realistic and spatially accurate urban representations that adapt to various city contexts, with a 4.9% improvement in image realism and a 5.8% increase in density similarity. Generative experiments further demonstrate that DualControlNet consistently responds to the built environment metrics, assisting in exploring sustainable urban scenarios in a computationally efficient manner. Our findings highlight the potential of generative AI to bridge quantitative planning objectives and urban system designs, offering a scalable and interpretable tool for spatial analytics and scenario-based urban planning."
+    ],
+    "image": "assets/projects/song-dualcontrolnet.png",
+    "image_alt": "Environmental control maps, generated satellite images, and corresponding land use maps in five Orlando examples.",
+    "caption": "Synthetic satellite and land use images in Orlando. Qingqi Song"
+  },
+  {
+    "order": 3,
+    "title": "Exploring the Relationship Between Urban Green Spaces and Sociodemographic Variables with Urban Heat Island Effect in Major U.S. Cities",
+    "author": "Mia L. J. Ciceri",
+    "category": "GREEN SPACE & URBAN HEAT",
+    "abstract_paragraphs": [
+      "With almost two-thirds of the world population expected to live in urban areas by the year 2050, rapid urbanization is a problem that many cities are having to deal with (United Nations, 2018). Certain issues have risen due to this such as housing crises, lack of resources, and a phenomenon known as Urban Heat Island (UHI) Effect. UHI is responsible for increased temperatures in urban areas that negatively affect the health of residents and the environment. Planners, developers, and governments are searching for ways to address UHI in ways that serve the ecosystem as well as those who live in rapidly urbanized communities. One method to achieve this is to understand the relationship that green infrastructure such as parks, plazas, and gardens has on temperature. Another approach is to analyze how sociodemographic variables related to race, education, and income help map UHI.",
+      "Generally, past research has shown that the presence of green infrastructure and organic matter decreases temperatures in cities. However, there are some exceptions to these findings, and the rate or strength of this effect varies wildly depending on the type of green infrastructure, physical configuration of green space, city structure, etc. There are many studies that explore this relationship in major cities in the world using data from remote sensing, light detection and ranging (LiDAR), satellite imagery, and more.",
+      "The purpose of this study is to examine the effect that green infrastructure, green spaces, and sociodemographics have on UHI in major U.S. cities. Major findings show that there is a significant relationship between green space, social and demographic variables, and UHI effect. However, this relationship varies amongst the different study areas, highlighting the necessity in localized decision-making and planning. The findings aim to describe an optimal framework to identify the best practices and methods for planners and designers to use to reduce the negative effects of UHI when faced with rapid urbanization in U.S. cities."
+    ],
+    "image": "assets/projects/ciceri-urban-heat.png",
+    "image_alt": "Local spatial cluster map of land surface temperature in New York City, with a legend for high-high, low-low, and other cluster types.",
+    "caption": "Land surface temperature clusters in New York City. Mia L. J. Ciceri"
+  },
+  {
+    "order": 4,
+    "title": "Fair Share Florida: Property Taxation Equity Analysis in Pinellas County",
+    "author": "Ryan Chisholm",
+    "category": "PROPERTY TAXATION & EQUITY",
+    "abstract_paragraphs": [
+      "Property taxation is the primary revenue source for local governments in Florida, but its distribution is heavily shaped by exemptions and assessment limitations that shift tax burdens across property owners. Policies such as Save Our Homes reduce tax liability for long-tenure homeowners while shifting a disproportionate share of the burden onto newer buyers, increasing barriers to homeownership and reducing housing mobility. This research evaluates how alternative property tax systems could redistribute these burdens while maintaining revenue neutrality.",
+      "Using parcel-level data from Pinellas County, four tax models were simulated: the current system, a land value tax (LVT), a progressive property tax modeled after Washington, D.C., and a full homestead exemption policy proposed by the state. Each model was calibrated to generate equivalent total revenue for each taxing district, allowing direct comparison of distributional outcomes.",
+      "Results show that the current system produces substantial tenure-based inequities, with recent homebuyers facing effective tax rates more than three times higher than long-tenure homeowners. The LVT produces the greatest improvements in equity but significantly increases homeowner tax burdens. The progressive system achieves comparable equity gains with more moderate impacts, while the full homeowner exemption-based approach shifts the highest burden onto rental and non-homesteaded properties.",
+      "Ultimately, the findings indicate that progressive rate structures offer the most balanced approach, improving tax equity without imposing large increases on homeowners, while exemption-based policies exacerbate burden shifting. These results demonstrate that observed disparities are not inevitable, but the result of policy design, and that more equitable property tax systems are achievable within revenue-neutral frameworks."
+    ],
+    "image": "assets/projects/chisholm-property-tax.png",
+    "image_alt": "Diagram comparing market value and assessed value over time, reproduced from the property taxation project.",
+    "caption": "Illustration of market value and assessed value over time. Ryan Chisholm"
+  },
+  {
+    "order": 5,
+    "title": "Neighborhood Socioeconomic Conditions and Housing Values in Florida",
+    "author": "Chi Zhang",
+    "category": "HOUSING & SPATIAL ANALYSIS",
+    "abstract_paragraphs": [
+      "This study examines how neighborhood socioeconomic conditions are related to housing values across census tracts in Florida. Using data from the 2018–2022 American Community Survey and 2020 TIGER/Line shapefiles, a dataset of 4,167 census tracts is constructed. The analysis combines descriptive statistics, spatial autocorrelation analysis, ordinary least squares (OLS) regression, and a Random Forest model. Results show clear spatial clustering in housing values, with a Global Moran’s I of 0.383, indicating strong positive spatial dependence.",
+      "Regression results suggest that median household income and higher education ratio are positively associated with housing values, while non-employment is negatively related. Vacancy rate and median age are also positively associated with housing values, which may reflect Florida’s unique housing market and demographic structure, including seasonal housing and a large retiree population.",
+      "The Random Forest results are consistent with the regression findings and confirm the importance of income as the main predictor. Overall, the study shows that housing values in Florida are shaped by both socioeconomic factors and state-specific demographic characteristics, highlighting the importance of considering local context in housing market analysis."
+    ],
+    "image": "assets/projects/zhang-housing-values.png",
+    "image_alt": "Choropleth map showing the spatial distribution of median housing values across Florida census tracts.",
+    "caption": "Median housing values across Florida census tracts. Chi Zhang"
+  }
+]
