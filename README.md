@@ -1,4 +1,6 @@
-# UF Urban Analytics | GitHub Pages package v5
+# UF Urban Analytics 
+
+https://qinghou1.github.io/MSUA/
 
 This package is built from the approved **20260930_UF_Urban_Analytics_Self_Contained_v3.html**. It preserves the latest page design and content, including the aligned program buttons and horizontal student-research carousel with Yuqi Zhou first.
 
